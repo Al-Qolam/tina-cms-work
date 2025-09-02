@@ -69,6 +69,18 @@ const iconColorClass: {
     regular: 'text-white opacity-80',
     circle: 'bg-white-400 dark:bg-white-500 text-white-50',
   },
+  gold: {
+    regular: 'text-yellow-400',
+    circle: 'bg-yellow-400 dark:bg-yellow-500 text-yellow-50',
+  },
+  gray: {
+    regular: 'text-gray-400',
+    circle: 'bg-gray-400 dark:bg-gray-500 text-gray-50',
+  },
+  cyan: {
+    regular: 'text-cyan-400',
+    circle: 'bg-cyan-400 dark:bg-cyan-500 text-cyan-50',
+  },
 };
 
 const iconSizeClass = {
@@ -100,17 +112,20 @@ export const Icon = ({ data, parentColor = '', className = '', tinaField = '' })
   const iconColor = color ? (color === 'primary' ? theme!.color : color) : theme!.color;
 
   if (style == 'circle') {
+    const colorConfig = iconColorClass[iconColor];
+    const circleColorClasses = colorConfig ? colorConfig.circle : iconColorClass.blue.circle; // fallback to blue if color not found
     return (
       <div
         {...(tinaField ? { 'data-tina-field': tinaField } : {})} // only render data-tina-field if it exists
-        className={`relative z-10 inline-flex items-center justify-center shrink-0 ${iconSizeClasses} rounded-full ${iconColorClass[iconColor].circle} ${className}`}
+        className={`relative z-10 inline-flex items-center justify-center shrink-0 ${iconSizeClasses} rounded-full ${circleColorClasses} ${className}`}
       >
         <IconSVG className='w-2/3 h-2/3' />
       </div>
     );
   } else {
-    const iconColorClasses =
-      iconColorClass[parentColor === 'primary' && (iconColor === theme!.color || iconColor === 'primary') ? 'white' : iconColor!].regular;
+    const colorKey = parentColor === 'primary' && (iconColor === theme!.color || iconColor === 'primary') ? 'white' : iconColor!;
+    const colorConfig = iconColorClass[colorKey];
+    const iconColorClasses = colorConfig ? colorConfig.regular : iconColorClass.blue.regular; // fallback to blue if color not found
     return (
       <IconSVG
         {...(tinaField ? { 'data-tina-field': tinaField } : {})} // only render data-tina-field if it exists
