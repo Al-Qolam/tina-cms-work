@@ -9,6 +9,14 @@ import { Callout } from "./callout";
 import { Stats } from "./stats";
 import { CallToAction } from "./call-to-action";
 
+// New landing page blocks
+import { HeroSlider } from "./hero-slider";
+import { AboutSection } from "./about-section";
+import { StatisticsSection } from "./statistics-section";
+import { ProgramSection } from "./program-section";
+import { CTABanner } from "./cta-banner";
+import { NewsSection } from "./news-section";
+
 export const Blocks = (props: Omit<Page, "id" | "_sys" | "_values">) => {
   if (!props.blocks) return null;
   return (
@@ -42,6 +50,19 @@ const Block = (block: PageBlocks) => {
       return <Testimonial data={block} />;
     case "PageBlocksCta":
       return <CallToAction data={block} />;
+    // New landing page blocks
+    case "PageBlocksHeroSlider":
+      return <HeroSlider data={block} />;
+    case "PageBlocksAboutSection":
+      return <AboutSection data={block} />;
+    case "PageBlocksStatisticsSection":
+      return <StatisticsSection data={block} />;
+    case "PageBlocksProgramSection":
+      return <ProgramSection data={block} />;
+    case "PageBlocksCtaBanner":
+      return <CTABanner data={block} />;
+    case "PageBlocksNewsSection":
+      return <NewsSection data={block} />;
     default:
       return null;
   }

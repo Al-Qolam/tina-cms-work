@@ -8,6 +8,14 @@ import { calloutBlockSchema } from '@/components/blocks/callout';
 import { statsBlockSchema } from '@/components/blocks/stats';
 import { ctaBlockSchema } from '@/components/blocks/call-to-action';
 
+// New landing page block schemas
+import { heroSliderBlockSchema } from '@/components/blocks/hero-slider';
+import { aboutSectionBlockSchema } from '@/components/blocks/about-section';
+import { statisticsSectionBlockSchema } from '@/components/blocks/statistics-section';
+import { programSectionBlockSchema } from '@/components/blocks/program-section';
+import { ctaBannerBlockSchema } from '@/components/blocks/cta-banner';
+import { newsSectionBlockSchema } from '@/components/blocks/news-section';
+
 const Page: Collection = {
   label: 'Pages',
   name: 'page',
@@ -32,6 +40,7 @@ const Page: Collection = {
         visualSelector: true,
       },
       templates: [
+        // Existing blocks
         heroBlockSchema,
         calloutBlockSchema,
         featureBlockSchema,
@@ -40,6 +49,13 @@ const Page: Collection = {
         contentBlockSchema,
         testimonialBlockSchema,
         videoBlockSchema,
+        // New landing page blocks
+        heroSliderBlockSchema,
+        aboutSectionBlockSchema,
+        statisticsSectionBlockSchema,
+        programSectionBlockSchema,
+        ctaBannerBlockSchema,
+        newsSectionBlockSchema,
       ],
     },
   ],
