@@ -1,48 +1,36 @@
 import React from 'react';
+import { EnhancedLayout } from '@/components/layout';
 import {
-  TopBar,
-  NavBar,
   HeroSlider,
   AboutSection,
   StatisticsSection,
   ProgramSection,
   CTABanner,
-  NewsSection,
-  Footer
+  NewsSection
 } from '@/components/layout';
 
 interface LandingPageProps {
   // Optional props untuk customization
-  topBarProps?: any;
-  navBarProps?: any;
+  rawPageData?: any;
   heroProps?: any;
   aboutProps?: any;
   statsProps?: any;
   programProps?: any;
   ctaProps?: any;
   newsProps?: any;
-  footerProps?: any;
 }
 
-export default function LandingPage({
-  topBarProps = {},
-  navBarProps = {},
+export default async function LandingPage({
+  rawPageData,
   heroProps = {},
   aboutProps = {},
   statsProps = {},
   programProps = {},
   ctaProps = {},
-  newsProps = {},
-  footerProps = {}
+  newsProps = {}
 }: LandingPageProps) {
   return (
-    <div className="min-h-screen">
-      {/* Top Bar - Informasi kontak dan social media */}
-      <TopBar {...topBarProps} />
-      
-      {/* Navigation Bar - Menu utama */}
-      <NavBar {...navBarProps} />
-      
+    <EnhancedLayout rawPageData={rawPageData}>
       {/* Hero Slider - Banner utama dengan slider */}
       <HeroSlider {...heroProps} />
       
@@ -63,9 +51,6 @@ export default function LandingPage({
       
       {/* News Section - Berita dan kegiatan terbaru */}
       <NewsSection {...newsProps} />
-      
-      {/* Footer - Informasi lengkap sekolah */}
-      <Footer {...footerProps} />
-    </div>
+    </EnhancedLayout>
   );
 }

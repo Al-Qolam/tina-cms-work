@@ -14,4 +14,5 @@ export { default as LandingPage } from './LandingPage';
 
 // Existing layout components
 export { default as Layout } from './layout';
+export { default as EnhancedLayout } from './enhanced-layout';
 export { Section } from './section';
