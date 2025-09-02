@@ -24,9 +24,9 @@ export const AboutSection = ({ data }: { data: any }) => {
             </h3>
             <h2 
               className="text-4xl font-bold text-gray-900 mb-6"
-              data-tina-field={tinaField(data, 'title')}
+              data-tina-field={tinaField(data, 'aboutTitle')}
             >
-              {data.title}
+              {data.aboutTitle}
             </h2>
             <p 
               className="text-lg text-gray-700 leading-relaxed"
@@ -54,9 +54,9 @@ export const AboutSection = ({ data }: { data: any }) => {
                 <div>
                   <h4 
                     className="font-semibold text-gray-900 mb-2"
-                    data-tina-field={tinaField(feature, 'title')}
+                    data-tina-field={tinaField(feature, 'featureTitle')}
                   >
-                    {feature.title}
+                    {feature.featureTitle}
                   </h4>
                   <p 
                     className="text-gray-600 text-sm"
@@ -86,10 +86,10 @@ export const AboutSection = ({ data }: { data: any }) => {
         <div className="order-1 lg:order-2">
           <div className="relative">
             <img
-              src={data.image}
-              alt={data.title}
+              src={data.aboutImage}
+              alt={data.aboutTitle}
               className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-lg"
-              data-tina-field={tinaField(data, 'image')}
+              data-tina-field={tinaField(data, 'aboutImage')}
             />
             
             {/* Floating Card */}
@@ -161,19 +161,19 @@ export const aboutSectionBlockSchema: Template = {
   ui: {
     previewSrc: '/blocks/about-section.png',
     defaultItem: {
-      title: 'Tentang Sekolah Kami',
+      aboutTitle: 'Tentang Sekolah Kami',
       subtitle: 'Membangun Generasi Unggul',
       description: 'Sekolah kami telah berdedikasi dalam dunia pendidikan selama lebih dari 35 tahun dengan komitmen memberikan pendidikan berkualitas.',
-      image: '/uploads/about-school.jpg',
+      aboutImage: '/uploads/about-school.jpg',
       features: [
         {
           icon: { name: 'BiAward', color: 'blue' },
-          title: 'Akreditasi A',
+          featureTitle: 'Akreditasi A',
           description: 'Terakreditasi A dari BAN-S/M dengan standar pendidikan tinggi'
         },
         {
           icon: { name: 'BiGroup', color: 'green' },
-          title: 'Tenaga Pengajar Profesional',
+          featureTitle: 'Tenaga Pengajar Profesional',
           description: '50+ guru berpengalaman dan berkualitas'
         }
       ],
@@ -191,11 +191,11 @@ export const aboutSectionBlockSchema: Template = {
     },
   },
   fields: [
-    ...sectionBlockSchemaField,
+    sectionBlockSchemaField,
     {
       type: 'string',
-      label: 'Title',
-      name: 'title',
+      label: 'About Title',
+      name: 'aboutTitle',
       required: true,
     },
     {
@@ -213,8 +213,8 @@ export const aboutSectionBlockSchema: Template = {
     },
     {
       type: 'image',
-      label: 'Image',
-      name: 'image',
+      label: 'About Image',
+      name: 'aboutImage',
     },
     {
       type: 'object',
@@ -223,15 +223,15 @@ export const aboutSectionBlockSchema: Template = {
       list: true,
       ui: {
         itemProps: (item) => ({
-          label: item?.title || 'Feature',
+          label: item?.featureTitle || 'Feature',
         }),
       },
       fields: [
         iconSchema,
         {
           type: 'string',
-          label: 'Title',
-          name: 'title',
+          label: 'Feature Title',
+          name: 'featureTitle',
           required: true,
         },
         {

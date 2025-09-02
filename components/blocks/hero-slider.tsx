@@ -49,7 +49,7 @@ export const HeroSlider = ({ data }: { data: any }) => {
           {/* Background Image */}
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${slide.image})` }}
+            style={{ backgroundImage: `url(${slide.slideImage})` }}
           >
             <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           </div>
@@ -66,9 +66,9 @@ export const HeroSlider = ({ data }: { data: any }) => {
                 </h2>
                 <h1 
                   className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
-                  data-tina-field={tinaField(slide, 'title')}
+                  data-tina-field={tinaField(slide, 'slideTitle')}
                 >
-                  {slide.title}
+                  {slide.slideTitle}
                 </h1>
                 <p 
                   className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto"
@@ -160,10 +160,10 @@ export const heroSliderBlockSchema: Template = {
     defaultItem: {
       slides: [
         {
-          title: 'Selamat Datang di Sekolah Kami',
+          slideTitle: 'Selamat Datang di Sekolah Kami',
           subtitle: 'Membangun Generasi Unggul dan Berkarakter',
           description: 'Pendidikan berkualitas dengan fasilitas modern dan tenaga pengajar profesional.',
-          image: '/uploads/hero-slide-1.jpg',
+          slideImage: '/uploads/hero-slide-1.jpg',
           primaryButton: { label: 'Profil Sekolah', href: '/profil-sekolah' },
           secondaryButton: { label: 'Daftar Sekarang', href: '/pendaftaran' }
         }
@@ -173,7 +173,7 @@ export const heroSliderBlockSchema: Template = {
     },
   },
   fields: [
-    ...sectionBlockSchemaField,
+    sectionBlockSchemaField,
     {
       type: 'object',
       label: 'Slides',
@@ -181,14 +181,14 @@ export const heroSliderBlockSchema: Template = {
       list: true,
       ui: {
         itemProps: (item) => ({
-          label: item?.title || 'Slide',
+          label: item?.slideTitle || 'Slide',
         }),
       },
       fields: [
         {
           type: 'string',
           label: 'Title',
-          name: 'title',
+          name: 'slideTitle',
           required: true,
         },
         {
@@ -207,7 +207,7 @@ export const heroSliderBlockSchema: Template = {
         {
           type: 'image',
           label: 'Background Image',
-          name: 'image',
+          name: 'slideImage',
           required: true,
         },
         {

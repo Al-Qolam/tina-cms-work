@@ -49,13 +49,9 @@ const Page: Collection = {
         contentBlockSchema,
         testimonialBlockSchema,
         videoBlockSchema,
-        // New landing page blocks
-        heroSliderBlockSchema,
+        // New landing page blocks (testing one by one)
+        // heroSliderBlockSchema,
         aboutSectionBlockSchema,
-        statisticsSectionBlockSchema,
-        programSectionBlockSchema,
-        ctaBannerBlockSchema,
-        newsSectionBlockSchema,
       ],
     },
   ],

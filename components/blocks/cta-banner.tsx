@@ -117,7 +117,7 @@ export const ctaBannerBlockSchema: Template = {
     },
   },
   fields: [
-    ...sectionBlockSchemaField,
+    sectionBlockSchemaField,
     {
       type: 'string',
       label: 'Title',

@@ -200,7 +200,7 @@ export const programSectionBlockSchema: Template = {
     },
   },
   fields: [
-    ...sectionBlockSchemaField,
+    sectionBlockSchemaField,
     {
       type: 'string',
       label: 'Title',

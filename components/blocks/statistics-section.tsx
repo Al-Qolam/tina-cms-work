@@ -212,7 +212,7 @@ export const statisticsSectionBlockSchema: Template = {
     },
   },
   fields: [
-    ...sectionBlockSchemaField,
+    sectionBlockSchemaField,
     {
       type: 'string',
       label: 'Title',

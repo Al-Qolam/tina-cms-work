@@ -156,7 +156,7 @@ export const newsSectionBlockSchema: Template = {
     },
   },
   fields: [
-    ...sectionBlockSchemaField,
+    sectionBlockSchemaField,
     {
       type: 'string',
       label: 'Title',
