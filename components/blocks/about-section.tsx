@@ -108,13 +108,13 @@ export const AboutSection = ({ data }: { data: any }) => {
                   <div>
                     <h4 
                       className="font-bold text-gray-900 text-2xl"
-                      data-tina-field={tinaField(data, 'achievementCard', 'value')}
+                      data-tina-field={tinaField(data.achievementCard, 'value')}
                     >
                       {data.achievementCard.value}
                     </h4>
                     <p 
                       className="text-gray-600"
-                      data-tina-field={tinaField(data, 'achievementCard', 'label')}
+                      data-tina-field={tinaField(data.achievementCard, 'label')}
                     >
                       {data.achievementCard.label}
                     </p>
@@ -136,13 +136,13 @@ export const AboutSection = ({ data }: { data: any }) => {
                 />
                 <p 
                   className="font-bold"
-                  data-tina-field={tinaField(data, 'achievementBadge', 'value')}
+                  data-tina-field={tinaField(data.achievementBadge, 'value')}
                 >
                   {data.achievementBadge.value}
                 </p>
                 <p 
                   className="text-xs"
-                  data-tina-field={tinaField(data, 'achievementBadge', 'label')}
+                  data-tina-field={tinaField(data.achievementBadge, 'label')}
                 >
                   {data.achievementBadge.label}
                 </p>
