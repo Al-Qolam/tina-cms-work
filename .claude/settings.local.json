@@ -9,7 +9,9 @@
       "Bash(for:*)",
       "Bash(do)",
       "Bash(sed:*)",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(bun tinacms build:*)",
+      "Bash(npx @tinacms/cli build:*)"
     ],
     "deny": [],
     "ask": []
