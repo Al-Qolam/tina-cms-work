@@ -85,7 +85,16 @@ function useCounter(end: number, duration: number = 2000) {
 
 function StatCard({ stat, index }: { stat: Statistic; index: number }) {
   const isNumber = typeof stat.value === 'number';
-  const numericValue: number = isNumber ? stat.value : 0;
+  // Extract numeric value for counter animation
+  const numericValue = (() => {
+    if (typeof stat.value === 'number') {
+      return stat.value;
+    }
+    // For string values, try to extract number or default to 0
+    const parsed = parseInt(stat.value as string);
+    return isNaN(parsed) ? 0 : parsed;
+  })();
+  
   const { count, setIsVisible } = useCounter(numericValue);
 
   useEffect(() => {
