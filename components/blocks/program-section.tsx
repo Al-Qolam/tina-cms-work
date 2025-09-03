@@ -23,9 +23,9 @@ export const ProgramSection = ({ data }: { data: any }) => {
         </h3>
         <h2 
           className="text-4xl font-bold text-gray-900 mb-6"
-          data-tina-field={tinaField(data, 'title')}
+          data-tina-field={tinaField(data, 'programTitle')}
         >
-          {data.title}
+          {data.programTitle}
         </h2>
         <p 
           className="text-lg text-gray-700 max-w-3xl mx-auto"
@@ -180,7 +180,7 @@ export const programSectionBlockSchema: Template = {
   ui: {
     previewSrc: '/blocks/program-section.png',
     defaultItem: {
-      title: 'Program Pendidikan',
+      programTitle: 'Program Pendidikan',
       subtitle: 'Jenjang Pendidikan Lengkap',
       description: 'Kami menyediakan program pendidikan dari tingkat dasar hingga menengah atas dengan kurikulum berkualitas.',
       programs: [
@@ -203,8 +203,8 @@ export const programSectionBlockSchema: Template = {
     sectionBlockSchemaField,
     {
       type: 'string',
-      label: 'Title',
-      name: 'title',
+      label: 'Program Title',
+      name: 'programTitle',
       required: true,
     },
     {

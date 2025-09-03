@@ -95,9 +95,9 @@ export const NewsSection = ({ data }: { data: any }) => {
         </h3>
         <h2 
           className="text-4xl font-bold text-gray-900 mb-6"
-          data-tina-field={tinaField(data, 'title')}
+          data-tina-field={tinaField(data, 'newsTitle')}
         >
-          {data.title}
+          {data.newsTitle}
         </h2>
         <p 
           className="text-lg text-gray-700 max-w-3xl mx-auto"
@@ -137,7 +137,7 @@ export const newsSectionBlockSchema: Template = {
   ui: {
     previewSrc: '/blocks/news-section.png',
     defaultItem: {
-      title: 'Berita & Kegiatan Terbaru',
+      newsTitle: 'Berita & Kegiatan Terbaru',
       subtitle: 'Update Sekolah',
       description: 'Ikuti perkembangan dan kegiatan terbaru di sekolah kami.',
       news: [
@@ -159,8 +159,8 @@ export const newsSectionBlockSchema: Template = {
     sectionBlockSchemaField,
     {
       type: 'string',
-      label: 'Title',
-      name: 'title',
+      label: 'News Title',
+      name: 'newsTitle',
       required: true,
     },
     {

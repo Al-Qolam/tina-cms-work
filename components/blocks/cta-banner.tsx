@@ -66,9 +66,9 @@ export const CTABanner = ({ data }: { data: any }) => {
           {/* Title */}
           <h2 
             className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight max-w-4xl mx-auto"
-            data-tina-field={tinaField(data, 'title')}
+            data-tina-field={tinaField(data, 'bannerTitle')}
           >
-            {data.title}
+            {data.bannerTitle}
           </h2>
 
           {/* Description */}
@@ -105,7 +105,7 @@ export const ctaBannerBlockSchema: Template = {
   ui: {
     previewSrc: '/blocks/cta-banner.png',
     defaultItem: {
-      title: 'Bergabunglah dengan Keluarga Besar Kami',
+      bannerTitle: 'Bergabunglah dengan Keluarga Besar Kami',
       subtitle: 'Daftar Sekarang',
       description: 'Jadilah bagian dari sekolah yang telah mencetak generasi unggul selama puluhan tahun.',
       buttons: [
@@ -120,8 +120,8 @@ export const ctaBannerBlockSchema: Template = {
     sectionBlockSchemaField,
     {
       type: 'string',
-      label: 'Title',
-      name: 'title',
+      label: 'Banner Title',
+      name: 'bannerTitle',
       required: true,
     },
     {

@@ -138,9 +138,9 @@ export const StatisticsSection = ({ data }: { data: any }) => {
         </h3>
         <h2 
           className={`text-4xl font-bold mb-6 ${getTextClasses(background)}`}
-          data-tina-field={tinaField(data, 'title')}
+          data-tina-field={tinaField(data, 'statisticsTitle')}
         >
-          {data.title}
+          {data.statisticsTitle}
         </h2>
         <p 
           className={`text-lg max-w-3xl mx-auto ${getDescriptionClasses(background)}`}
@@ -181,7 +181,7 @@ export const statisticsSectionBlockSchema: Template = {
   ui: {
     previewSrc: '/blocks/statistics-section.png',
     defaultItem: {
-      title: 'Prestasi Sekolah',
+      statisticsTitle: 'Prestasi Sekolah',
       subtitle: 'Pencapaian Membanggakan',
       description: 'Sekolah kami bangga dengan berbagai prestasi yang telah diraih dalam bidang akademik maupun non-akademik.',
       statistics: [
@@ -215,8 +215,8 @@ export const statisticsSectionBlockSchema: Template = {
     sectionBlockSchemaField,
     {
       type: 'string',
-      label: 'Title',
-      name: 'title',
+      label: 'Statistics Title',
+      name: 'statisticsTitle',
       required: true,
     },
     {
