@@ -85,7 +85,8 @@ function useCounter(end: number, duration: number = 2000) {
 
 function StatCard({ stat, index }: { stat: Statistic; index: number }) {
   const isNumber = typeof stat.value === 'number';
-  const { count, setIsVisible } = useCounter(isNumber ? stat.value : 0);
+  const numericValue = isNumber ? stat.value : 0;
+  const { count, setIsVisible } = useCounter(numericValue);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
