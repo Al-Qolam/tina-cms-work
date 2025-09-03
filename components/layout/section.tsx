@@ -44,8 +44,8 @@ export const tailwindBackgroundOptions = [
 ];
 
 export const sectionBlockSchemaField = {
-  type: "string" as const,
-  label: "Background",
+  type: "string",
+  label: "Background", 
   name: "background",
   options: tailwindBackgroundOptions,
-} satisfies any;
+};

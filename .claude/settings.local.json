@@ -4,7 +4,8 @@
       "Bash(rm:*)",
       "Bash(node:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "WebFetch(domain:tina.io)"
     ],
     "deny": [],
     "ask": []

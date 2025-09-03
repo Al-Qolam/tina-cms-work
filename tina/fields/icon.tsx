@@ -122,12 +122,12 @@ export const IconPickerInput = wrapFieldsWithMeta(({ input }) => {
 });
 
 export const iconSchema = {
-  type: 'object' as const,
+  type: 'object',
   label: 'Icon',
   name: 'icon',
   fields: [
     {
-      type: 'string' as const,
+      type: 'string',
       label: 'Icon',
       name: 'name',
       ui: {
@@ -135,7 +135,7 @@ export const iconSchema = {
       },
     },
     {
-      type: 'string' as const,
+      type: 'string',
       label: 'Color',
       name: 'color',
       ui: {
@@ -145,7 +145,7 @@ export const iconSchema = {
     {
       name: 'style',
       label: 'Style',
-      type: 'string' as const,
+      type: 'string',
       options: [
         {
           label: 'Circle',
@@ -158,4 +158,4 @@ export const iconSchema = {
       ],
     },
   ],
-} satisfies any;
+};

@@ -78,7 +78,7 @@ export const ctaBlockSchema: Template = {
         {
             label: 'Actions',
             name: 'actions',
-            type: 'object' as const,
+            type: 'object',
             list: true,
             ui: {
                 defaultItem: {
@@ -93,12 +93,12 @@ export const ctaBlockSchema: Template = {
                 {
                     label: 'Label',
                     name: 'label',
-                    type: 'string' as const,
+                    type: 'string',
                 },
                 {
                     label: 'Type',
                     name: 'type',
-                    type: 'string' as const,
+                    type: 'string',
                     options: [
                         { label: 'Button', value: 'button' },
                         { label: 'Link', value: 'link' },
@@ -108,7 +108,7 @@ export const ctaBlockSchema: Template = {
                 {
                     label: 'Link',
                     name: 'link',
-                    type: 'string' as const,
+                    type: 'string',
                 },
             ],
         },

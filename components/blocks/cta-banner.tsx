@@ -119,18 +119,18 @@ export const ctaBannerBlockSchema: Template = {
   fields: [
     sectionBlockSchemaField,
     {
-      type: 'string' as const,
+      type: 'string',
       label: 'Banner Title',
       name: 'bannerTitle',
       required: true,
     },
     {
-      type: 'string' as const,
+      type: 'string',
       label: 'Subtitle',
       name: 'subtitle',
     },
     {
-      type: 'string' as const,
+      type: 'string',
       label: 'Description',
       name: 'description',
       ui: {
@@ -138,7 +138,7 @@ export const ctaBannerBlockSchema: Template = {
       },
     },
     {
-      type: 'object' as const,
+      type: 'object',
       label: 'Buttons',
       name: 'buttons',
       list: true,
@@ -149,19 +149,19 @@ export const ctaBannerBlockSchema: Template = {
       },
       fields: [
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Label',
           name: 'label',
           required: true,
         },
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Link',
           name: 'href',
           required: true,
         },
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Style',
           name: 'style',
           options: ['primary', 'secondary', 'outline'],
@@ -169,7 +169,7 @@ export const ctaBannerBlockSchema: Template = {
       ],
     },
     {
-      type: 'string' as const,
+      type: 'string',
       label: 'Style',
       name: 'style',
       options: ['gradient', 'solid', 'image'],

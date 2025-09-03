@@ -193,18 +193,18 @@ export const aboutSectionBlockSchema: Template = {
   fields: [
     sectionBlockSchemaField,
     {
-      type: 'string' as const,
+      type: 'string',
       label: 'About Title',
       name: 'aboutTitle',
       required: true,
     },
     {
-      type: 'string' as const,
+      type: 'string',
       label: 'Subtitle',
       name: 'subtitle',
     },
     {
-      type: 'string' as const,
+      type: 'string',
       label: 'Description',
       name: 'description',
       ui: {
@@ -217,7 +217,7 @@ export const aboutSectionBlockSchema: Template = {
       name: 'aboutImage',
     },
     {
-      type: 'object' as const,
+      type: 'object',
       label: 'Features',
       name: 'features',
       list: true,
@@ -229,13 +229,13 @@ export const aboutSectionBlockSchema: Template = {
       fields: [
         iconSchema,
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Feature Title',
           name: 'featureTitle',
           required: true,
         },
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Description',
           name: 'description',
           ui: {
@@ -245,53 +245,53 @@ export const aboutSectionBlockSchema: Template = {
       ],
     },
     {
-      type: 'object' as const,
+      type: 'object',
       label: 'CTA Button',
       name: 'ctaButton',
       fields: [
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Label',
           name: 'label',
         },
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Link',
           name: 'href',
         },
       ],
     },
     {
-      type: 'object' as const,
+      type: 'object',
       label: 'Achievement Card',
       name: 'achievementCard',
       fields: [
         iconSchema,
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Value',
           name: 'value',
         },
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Label',
           name: 'label',
         },
       ],
     },
     {
-      type: 'object' as const,
+      type: 'object',
       label: 'Achievement Badge',
       name: 'achievementBadge',
       fields: [
         iconSchema,
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Value',
           name: 'value',
         },
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Label',
           name: 'label',
         },

@@ -214,18 +214,18 @@ export const statisticsSectionBlockSchema: Template = {
   fields: [
     sectionBlockSchemaField,
     {
-      type: 'string' as const,
+      type: 'string',
       label: 'Statistics Title',
       name: 'statisticsTitle',
       required: true,
     },
     {
-      type: 'string' as const,
+      type: 'string',
       label: 'Subtitle',
       name: 'subtitle',
     },
     {
-      type: 'string' as const,
+      type: 'string',
       label: 'Description',
       name: 'description',
       ui: {
@@ -233,7 +233,7 @@ export const statisticsSectionBlockSchema: Template = {
       },
     },
     {
-      type: 'object' as const,
+      type: 'object',
       label: 'Statistics',
       name: 'statistics',
       list: true,
@@ -245,7 +245,7 @@ export const statisticsSectionBlockSchema: Template = {
       fields: [
         iconSchema,
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Value',
           name: 'value',
           required: true,
@@ -254,13 +254,13 @@ export const statisticsSectionBlockSchema: Template = {
           }
         },
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Label',
           name: 'label',
           required: true,
         },
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Prefix',
           name: 'prefix',
           ui: {
@@ -268,7 +268,7 @@ export const statisticsSectionBlockSchema: Template = {
           }
         },
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Suffix',
           name: 'suffix',
           ui: {

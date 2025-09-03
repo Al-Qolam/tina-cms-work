@@ -158,18 +158,18 @@ export const newsSectionBlockSchema: Template = {
   fields: [
     sectionBlockSchemaField,
     {
-      type: 'string' as const,
+      type: 'string',
       label: 'News Title',
       name: 'newsTitle',
       required: true,
     },
     {
-      type: 'string' as const,
+      type: 'string',
       label: 'Subtitle',
       name: 'subtitle',
     },
     {
-      type: 'string' as const,
+      type: 'string',
       label: 'Description',
       name: 'description',
       ui: {
@@ -177,7 +177,7 @@ export const newsSectionBlockSchema: Template = {
       },
     },
     {
-      type: 'object' as const,
+      type: 'object',
       label: 'News Items',
       name: 'news',
       list: true,
@@ -188,13 +188,13 @@ export const newsSectionBlockSchema: Template = {
       },
       fields: [
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Title',
           name: 'title',
           required: true,
         },
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Excerpt',
           name: 'excerpt',
           ui: {
@@ -207,7 +207,7 @@ export const newsSectionBlockSchema: Template = {
           name: 'image',
         },
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Date',
           name: 'date',
           ui: {
@@ -215,12 +215,12 @@ export const newsSectionBlockSchema: Template = {
           }
         },
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Category',
           name: 'category',
         },
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Slug',
           name: 'slug',
           required: true,
@@ -229,7 +229,7 @@ export const newsSectionBlockSchema: Template = {
           }
         },
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Author',
           name: 'author',
         },
@@ -244,17 +244,17 @@ export const newsSectionBlockSchema: Template = {
       }
     },
     {
-      type: 'object' as const,
+      type: 'object',
       label: 'View All Button',
       name: 'viewAllButton',
       fields: [
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Label',
           name: 'label',
         },
         {
-          type: 'string' as const,
+          type: 'string',
           label: 'Link',
           name: 'href',
         },
