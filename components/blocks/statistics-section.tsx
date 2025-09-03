@@ -41,8 +41,9 @@ function useCounter(end: number, duration: number = 2000) {
 }
 
 function StatCard({ stat, index }: { stat: any; index: number }) {
-  const isNumber = typeof stat.value === 'number';
-  const { count, setIsVisible } = useCounter(isNumber ? stat.value : 0);
+  const numValue = Number(stat.value);
+  const isNumber = !isNaN(numValue) && stat.value !== '';
+  const { count, setIsVisible } = useCounter(isNumber ? numValue : 0);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -187,19 +188,19 @@ export const statisticsSectionBlockSchema: Template = {
       statistics: [
         {
           icon: { name: 'BiGroup', color: 'blue' },
-          value: 500,
+          value: '500',
           label: 'Siswa Aktif',
           suffix: '+'
         },
         {
           icon: { name: 'BiUser', color: 'green' },
-          value: 50,
+          value: '50',
           label: 'Tenaga Pengajar',
           suffix: '+'
         },
         {
           icon: { name: 'BiTrophy', color: 'orange' },
-          value: 95,
+          value: '95',
           label: 'Tingkat Kelulusan',
           suffix: '%'
         },
