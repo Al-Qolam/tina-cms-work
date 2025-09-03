@@ -144,7 +144,7 @@ export const heroBlockSchema: Template = {
     },
   },
   fields: [
-    sectionBlockSchemaField as any,
+    sectionBlockSchemaField,
     {
       type: 'string' as const,
       label: 'Headline',
@@ -184,7 +184,7 @@ export const heroBlockSchema: Template = {
             { label: 'Link', value: 'link' },
           ],
         },
-        iconSchema as any,
+        iconSchema,
         {
           label: 'Link',
           name: 'link',

@@ -29,7 +29,7 @@ export const videoBlockSchema: Template = {
     },
   },
   fields: [
-    sectionBlockSchemaField as any,
+    sectionBlockSchemaField,
     {
       type: 'string' as const,
       label: 'Color',

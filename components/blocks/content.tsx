@@ -34,7 +34,7 @@ export const contentBlockSchema: Template = {
     },
   },
   fields: [
-    sectionBlockSchemaField as any,
+    sectionBlockSchemaField,
     {
       type: 'rich-text' as const,
       label: 'Body',

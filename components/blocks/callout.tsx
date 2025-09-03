@@ -69,7 +69,7 @@ export const calloutBlockSchema: Template = {
         },
     },
     fields: [
-        sectionBlockSchemaField as any,
+        sectionBlockSchemaField,
         {
             type: 'string' as const,
             label: 'Text',

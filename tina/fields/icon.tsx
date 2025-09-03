@@ -121,7 +121,7 @@ export const IconPickerInput = wrapFieldsWithMeta(({ input }) => {
   );
 });
 
-export const iconSchema = {
+export const iconSchema: any = {
   type: 'object' as const,
   label: 'Icon',
   name: 'icon',

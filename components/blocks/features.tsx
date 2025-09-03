@@ -92,7 +92,7 @@ export const featureBlockSchema: Template = {
     },
   },
   fields: [
-    sectionBlockSchemaField as any,
+    sectionBlockSchemaField,
     {
       type: "string" as const,
       label: "Title",
@@ -119,7 +119,7 @@ export const featureBlockSchema: Template = {
         },
       },
       fields: [
-        iconSchema as any,
+        iconSchema,
         {
           type: "string" as const,
           label: "Title",

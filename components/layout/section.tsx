@@ -43,7 +43,7 @@ export const tailwindBackgroundOptions = [
   { label: "Rose", value: "bg-rose-50/80" },
 ];
 
-export const sectionBlockSchemaField = {
+export const sectionBlockSchemaField: any = {
   type: "string" as const,
   label: "Background", 
   name: "background",

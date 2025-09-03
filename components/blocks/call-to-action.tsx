@@ -104,7 +104,7 @@ export const ctaBlockSchema: Template = {
                         { label: 'Link', value: 'link' },
                     ],
                 },
-                iconSchema as any,
+                iconSchema,
                 {
                     label: 'Link',
                     name: 'link',

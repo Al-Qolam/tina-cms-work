@@ -64,7 +64,7 @@ export const testimonialBlockSchema: Template = {
     },
   },
   fields: [
-    sectionBlockSchemaField as any,
+    sectionBlockSchemaField,
     {
       type: "string" as const,
       label: "Title",
