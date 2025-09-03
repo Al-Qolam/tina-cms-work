@@ -146,19 +146,19 @@ export const heroBlockSchema: Template = {
   fields: [
     sectionBlockSchemaField as any,
     {
-      type: 'string',
+      type: 'string' as const,
       label: 'Headline',
       name: 'headline',
     },
     {
-      type: 'string',
+      type: 'string' as const,
       label: 'Tagline',
       name: 'tagline',
     },
     {
       label: 'Actions',
       name: 'actions',
-      type: 'object',
+      type: 'object' as const,
       list: true,
       ui: {
         defaultItem: {
@@ -173,12 +173,12 @@ export const heroBlockSchema: Template = {
         {
           label: 'Label',
           name: 'label',
-          type: 'string',
+          type: 'string' as const,
         },
         {
           label: 'Type',
           name: 'type',
-          type: 'string',
+          type: 'string' as const,
           options: [
             { label: 'Button', value: 'button' },
             { label: 'Link', value: 'link' },
@@ -188,29 +188,29 @@ export const heroBlockSchema: Template = {
         {
           label: 'Link',
           name: 'link',
-          type: 'string',
+          type: 'string' as const,
         },
       ],
     },
     {
-      type: 'object',
+      type: 'object' as const,
       label: 'Image',
       name: 'image',
       fields: [
         {
           name: 'src',
           label: 'Image Source',
-          type: 'image',
+          type: 'image' as const,
         },
         {
           name: 'alt',
           label: 'Alt Text',
-          type: 'string',
+          type: 'string' as const,
         },
         {
           name: 'videoUrl',
           label: 'Video URL',
-          type: 'string',
+          type: 'string' as const,
           description: 'If using a YouTube video, make sure to use the embed version of the video URL',
         },
       ],

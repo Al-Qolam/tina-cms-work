@@ -119,18 +119,18 @@ export const ctaBannerBlockSchema: Template = {
   fields: [
     sectionBlockSchemaField,
     {
-      type: 'string',
+      type: 'string' as const,
       label: 'Banner Title',
       name: 'bannerTitle',
       required: true,
     },
     {
-      type: 'string',
+      type: 'string' as const,
       label: 'Subtitle',
       name: 'subtitle',
     },
     {
-      type: 'string',
+      type: 'string' as const,
       label: 'Description',
       name: 'description',
       ui: {
@@ -138,7 +138,7 @@ export const ctaBannerBlockSchema: Template = {
       },
     },
     {
-      type: 'object',
+      type: 'object' as const,
       label: 'Buttons',
       name: 'buttons',
       list: true,
@@ -149,19 +149,19 @@ export const ctaBannerBlockSchema: Template = {
       },
       fields: [
         {
-          type: 'string',
+          type: 'string' as const,
           label: 'Label',
           name: 'label',
           required: true,
         },
         {
-          type: 'string',
+          type: 'string' as const,
           label: 'Link',
           name: 'href',
           required: true,
         },
         {
-          type: 'string',
+          type: 'string' as const,
           label: 'Style',
           name: 'style',
           options: ['primary', 'secondary', 'outline'],
@@ -169,13 +169,13 @@ export const ctaBannerBlockSchema: Template = {
       ],
     },
     {
-      type: 'string',
+      type: 'string' as const,
       label: 'Style',
       name: 'style',
       options: ['gradient', 'solid', 'image'],
     },
     {
-      type: 'image',
+      type: 'image' as const,
       label: 'Background Image',
       name: 'backgroundImage',
       ui: {
@@ -183,7 +183,7 @@ export const ctaBannerBlockSchema: Template = {
       }
     },
     {
-      type: 'boolean',
+      type: 'boolean' as const,
       label: 'Overlay',
       name: 'overlay',
       ui: {
