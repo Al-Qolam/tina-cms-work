@@ -94,17 +94,17 @@ export const featureBlockSchema: Template = {
   fields: [
     sectionBlockSchemaField as any,
     {
-      type: "string",
+      type: "string" as const,
       label: "Title",
       name: "title",
     },
     {
-      type: "string",
+      type: "string" as const,
       label: "Description",
       name: "description",
     },
     {
-      type: "object",
+      type: "object" as const,
       label: "Feature Items",
       name: "items",
       list: true,
@@ -121,12 +121,12 @@ export const featureBlockSchema: Template = {
       fields: [
         iconSchema as any,
         {
-          type: "string",
+          type: "string" as const,
           label: "Title",
           name: "title",
         },
         {
-          type: "rich-text",
+          type: "rich-text" as const,
           label: "Text",
           name: "text",
         },

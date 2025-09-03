@@ -175,7 +175,7 @@ export const heroSliderBlockSchema: Template = {
   fields: [
     sectionBlockSchemaField,
     {
-      type: 'object',
+      type: 'object' as const,
       label: 'Slides',
       name: 'slides',
       list: true,
@@ -186,18 +186,18 @@ export const heroSliderBlockSchema: Template = {
       },
       fields: [
         {
-          type: 'string',
+          type: 'string' as const,
           label: 'Title',
           name: 'slideTitle',
           required: true,
         },
         {
-          type: 'string',
+          type: 'string' as const,
           label: 'Subtitle',
           name: 'subtitle',
         },
         {
-          type: 'string',
+          type: 'string' as const,
           label: 'Description',
           name: 'description',
           ui: {
@@ -211,18 +211,18 @@ export const heroSliderBlockSchema: Template = {
           required: true,
         },
         {
-          type: 'object',
+          type: 'object' as const,
           label: 'Primary Button',
           name: 'primaryButton',
           fields: [
             {
-              type: 'string',
+              type: 'string' as const,
               label: 'Label',
               name: 'label',
               required: true,
             },
             {
-              type: 'string',
+              type: 'string' as const,
               label: 'Link',
               name: 'href',
               required: true,
@@ -230,17 +230,17 @@ export const heroSliderBlockSchema: Template = {
           ],
         },
         {
-          type: 'object',
+          type: 'object' as const,
           label: 'Secondary Button',
           name: 'secondaryButton',
           fields: [
             {
-              type: 'string',
+              type: 'string' as const,
               label: 'Label',
               name: 'label',
             },
             {
-              type: 'string',
+              type: 'string' as const,
               label: 'Link',
               name: 'href',
             },

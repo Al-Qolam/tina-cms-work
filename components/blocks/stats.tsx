@@ -54,17 +54,17 @@ export const statsBlockSchema: Template = {
     fields: [
         sectionBlockSchemaField as any,
         {
-            type: "string",
+            type: "string" as const,
             label: "Title",
             name: "title",
         },
         {
-            type: "string",
+            type: "string" as const,
             label: "Description",
             name: "description",
         },
         {
-            type: "object",
+            type: "object" as const,
             label: "Stats",
             name: "stats",
             list: true,
@@ -81,12 +81,12 @@ export const statsBlockSchema: Template = {
             },
             fields: [
                 {
-                    type: "string",
+                    type: "string" as const,
                     label: "Stat",
                     name: "stat",
                 },
                 {
-                    type: "string",
+                    type: "string" as const,
                     label: "Type",
                     name: "type",
                 },

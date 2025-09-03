@@ -202,18 +202,18 @@ export const programSectionBlockSchema: Template = {
   fields: [
     sectionBlockSchemaField,
     {
-      type: 'string',
+      type: 'string' as const,
       label: 'Program Title',
       name: 'programTitle',
       required: true,
     },
     {
-      type: 'string',
+      type: 'string' as const,
       label: 'Subtitle',
       name: 'subtitle',
     },
     {
-      type: 'string',
+      type: 'string' as const,
       label: 'Description',
       name: 'description',
       ui: {
@@ -221,7 +221,7 @@ export const programSectionBlockSchema: Template = {
       },
     },
     {
-      type: 'object',
+      type: 'object' as const,
       label: 'Programs',
       name: 'programs',
       list: true,
@@ -232,13 +232,13 @@ export const programSectionBlockSchema: Template = {
       },
       fields: [
         {
-          type: 'string',
+          type: 'string' as const,
           label: 'Title',
           name: 'title',
           required: true,
         },
         {
-          type: 'string',
+          type: 'string' as const,
           label: 'Description',
           name: 'description',
           ui: {
@@ -247,7 +247,7 @@ export const programSectionBlockSchema: Template = {
         },
         iconSchema,
         {
-          type: 'string',
+          type: 'string' as const,
           label: 'Features',
           name: 'features',
           list: true,
@@ -258,14 +258,14 @@ export const programSectionBlockSchema: Template = {
           name: 'image',
         },
         {
-          type: 'string',
+          type: 'string' as const,
           label: 'Link',
           name: 'href',
         },
       ],
     },
     {
-      type: 'object',
+      type: 'object' as const,
       label: 'Extra Features',
       name: 'extraFeatures',
       list: true,
@@ -277,30 +277,30 @@ export const programSectionBlockSchema: Template = {
       fields: [
         iconSchema,
         {
-          type: 'string',
+          type: 'string' as const,
           label: 'Title',
           name: 'title',
           required: true,
         },
         {
-          type: 'string',
+          type: 'string' as const,
           label: 'Description',
           name: 'description',
         },
       ],
     },
     {
-      type: 'object',
+      type: 'object' as const,
       label: 'CTA Button',
       name: 'ctaButton',
       fields: [
         {
-          type: 'string',
+          type: 'string' as const,
           label: 'Label',
           name: 'label',
         },
         {
-          type: 'string',
+          type: 'string' as const,
           label: 'Link',
           name: 'href',
         },

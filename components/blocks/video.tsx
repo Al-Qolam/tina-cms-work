@@ -31,7 +31,7 @@ export const videoBlockSchema: Template = {
   fields: [
     sectionBlockSchemaField as any,
     {
-      type: 'string',
+      type: 'string' as const,
       label: 'Color',
       name: 'color',
       options: [
@@ -41,7 +41,7 @@ export const videoBlockSchema: Template = {
       ],
     },
     {
-      type: 'string',
+      type: 'string' as const,
       label: 'Url',
       name: 'url',
     },

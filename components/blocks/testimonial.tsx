@@ -66,12 +66,12 @@ export const testimonialBlockSchema: Template = {
   fields: [
     sectionBlockSchemaField as any,
     {
-      type: "string",
+      type: "string" as const,
       label: "Title",
       name: "title",
     },
     {
-      type: "string",
+      type: "string" as const,
       label: "Description",
       name: "description",
       ui: {
@@ -79,7 +79,7 @@ export const testimonialBlockSchema: Template = {
       },
     },
     {
-      type: "object",
+      type: "object" as const,
       list: true,
       label: "Testimonials",
       name: "testimonials",
@@ -96,7 +96,7 @@ export const testimonialBlockSchema: Template = {
       },
       fields: [
         {
-          type: "string",
+          type: "string" as const,
           ui: {
             component: "textarea",
           },
@@ -104,17 +104,17 @@ export const testimonialBlockSchema: Template = {
           name: "quote",
         },
         {
-          type: "string",
+          type: "string" as const,
           label: "Author",
           name: "author",
         },
         {
-          type: "string",
+          type: "string" as const,
           label: "Role",
           name: "role",
         },
         {
-          type: "image",
+          type: "image" as const,
           label: "Avatar",
           name: "avatar",
         }

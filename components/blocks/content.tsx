@@ -36,7 +36,7 @@ export const contentBlockSchema: Template = {
   fields: [
     sectionBlockSchemaField as any,
     {
-      type: 'rich-text',
+      type: 'rich-text' as const,
       label: 'Body',
       name: 'body',
       templates: [scriptCopyBlockSchema],
