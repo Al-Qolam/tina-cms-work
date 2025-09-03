@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "tinacms dev -c \"next dev --turbopack\"",
     "dev:no-turbo": "tinacms dev -c \"next dev\"",
-    "build": "tinacms build --skip-cloud-checks && next build",
+    "build": "tinacms build && next build",
     "build-local": "tinacms build --local --skip-indexing --skip-cloud-checks && next build",
     "start": "tinacms build && next start",
     "export": "npm run build && next export",
@@ -49,7 +49,7 @@
     "styled-jsx": "^5.1.7",
     "tailwind-merge": "^2.6.0",
     "tailwindcss": "^4.1.11",
-    "tinacms": "^2.8.0",
+    "tinacms": "^2.8.2",
     "tw-animate-css": "^1.3.5",
     "usehooks-ts": "^3.1.1"
   }

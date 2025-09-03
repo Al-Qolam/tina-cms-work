@@ -11,7 +11,9 @@
       "Bash(sed:*)",
       "Bash(done)",
       "Bash(bun tinacms build:*)",
-      "Bash(npx @tinacms/cli build:*)"
+      "Bash(npx @tinacms/cli build:*)",
+      "Bash(bun run:*)",
+      "Bash(grep:*)"
     ],
     "deny": [],
     "ask": []
