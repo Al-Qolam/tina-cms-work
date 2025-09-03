@@ -48,4 +48,4 @@ export const sectionBlockSchemaField = {
   label: "Background",
   name: "background",
   options: tailwindBackgroundOptions,
-};
+} satisfies any;
