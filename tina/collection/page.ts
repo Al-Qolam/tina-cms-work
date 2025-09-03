@@ -1,20 +1,26 @@
 import type { Collection } from 'tinacms';
-import { heroBlockSchema } from '@/components/blocks/hero';
-import { contentBlockSchema } from '@/components/blocks/content';
-import { testimonialBlockSchema } from '@/components/blocks/testimonial';
-import { featureBlockSchema } from '@/components/blocks/features';
-import { videoBlockSchema } from '@/components/blocks/video';
+import { aboutSectionBlockSchema } from '@/components/blocks/about-section';
 import { calloutBlockSchema } from '@/components/blocks/callout';
-import { statsBlockSchema } from '@/components/blocks/stats';
+import { contentBlockSchema } from '@/components/blocks/content';
+import { ctaBannerBlockSchema } from '@/components/blocks/cta-banner';
 import { ctaBlockSchema } from '@/components/blocks/call-to-action';
+import { featureBlockSchema } from '@/components/blocks/features';
+import { heroBlockSchema } from '@/components/blocks/hero';
+import { heroSliderBlockSchema } from '@/components/blocks/hero-slider';
+import { newsSectionBlockSchema } from '@/components/blocks/news-section';
+import { programSectionBlockSchema } from '@/components/blocks/program-section';
+import { statisticsSectionBlockSchema } from '@/components/blocks/statistics-section';
+import { statsBlockSchema } from '@/components/blocks/stats';
+import { testimonialBlockSchema } from '@/components/blocks/testimonial';
+import { videoBlockSchema } from '@/components/blocks/video';
 
 // New landing page block schemas
-import { heroSliderBlockSchema } from '@/components/blocks/hero-slider';
-import { aboutSectionBlockSchema } from '@/components/blocks/about-section';
-import { statisticsSectionBlockSchema } from '@/components/blocks/statistics-section';
-import { programSectionBlockSchema } from '@/components/blocks/program-section';
-import { ctaBannerBlockSchema } from '@/components/blocks/cta-banner';
-import { newsSectionBlockSchema } from '@/components/blocks/news-section';
+
+
+
+
+
+
 
 const Page: Collection = {
   label: 'Pages',
@@ -40,7 +46,6 @@ const Page: Collection = {
         visualSelector: true,
       },
       templates: [
-        // Existing blocks
         heroBlockSchema,
         calloutBlockSchema,
         featureBlockSchema,
@@ -49,7 +54,6 @@ const Page: Collection = {
         contentBlockSchema,
         testimonialBlockSchema,
         videoBlockSchema,
-        // New landing page blocks
         heroSliderBlockSchema,
         aboutSectionBlockSchema,
         statisticsSectionBlockSchema,
