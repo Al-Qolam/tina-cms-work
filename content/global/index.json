@@ -9,16 +9,16 @@
     "color": "default",
     "nav": [
       {
-        "href": "/",
-        "label": "Home"
-      },
-      {
         "href": "/about",
         "label": "About"
       },
       {
         "href": "/posts",
         "label": "Blog"
+      },
+      {
+        "href": "/",
+        "label": "Home"
       }
     ]
   },
