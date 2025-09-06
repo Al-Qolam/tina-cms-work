@@ -20,6 +20,7 @@ import { StaffFeatured } from "./staff-featured";
 import { FAQ } from "./faq";
 import { RichContent } from "./rich-content";
 import { MarkdownArticle } from "./markdown-article";
+import { MegaMenu } from "./mega-menu";
 
 // New landing page blocks
 import { HeroSlider } from "./hero-slider";
@@ -99,6 +100,8 @@ const Block = (block: PageBlocks) => {
       return <RichContent data={block} />;
     case "PageBlocksMarkdownArticle":
       return <MarkdownArticle data={block} />;
+    case "PageBlocksMegaMenu":
+      return <MegaMenu data={block} />;
     default:
       return null;
   }

@@ -13,8 +13,9 @@ export const ProgramSection = ({ data }: { data: any }) => {
 
   return (
     <Section background={data.background}>
-      {/* Header */}
-      <div className="text-center mb-16">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
         <h3 
           className="text-blue-600 text-lg font-semibold mb-2"
           data-tina-field={tinaField(data, 'subtitle')}
@@ -170,6 +171,7 @@ export const ProgramSection = ({ data }: { data: any }) => {
           </Link>
         </div>
       )}
+      </div>
     </Section>
   );
 };

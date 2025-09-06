@@ -10,14 +10,16 @@ import { sectionBlockSchemaField } from '../layout/section';
 export const Testimonial = ({ data }: { data: PageBlocksTestimonial }) => {
   return (
     <Section background={data.background!}>
-      <div className="text-center">
-        <h2 className="text-title text-3xl font-semibold" data-tina-field={tinaField(data, 'title')}>{data.title}</h2>
-        <p className="text-body mt-6" data-tina-field={tinaField(data, 'description')}>{data.description}</p>
-      </div>
-      <div className="mt-8 [column-width:300px] [column-gap:1.5rem] md:mt-12">
-        {data.testimonials?.map((testimonial, index) => (
-          <TestimonialCard key={index} testimonial={testimonial!} />
-        ))}
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center">
+          <h2 className="text-title text-3xl font-semibold" data-tina-field={tinaField(data, 'title')}>{data.title}</h2>
+          <p className="text-body mt-6" data-tina-field={tinaField(data, 'description')}>{data.description}</p>
+        </div>
+        <div className="mt-8 [column-width:300px] [column-gap:1.5rem] md:mt-12">
+          {data.testimonials?.map((testimonial, index) => (
+            <TestimonialCard key={index} testimonial={testimonial!} />
+          ))}
+        </div>
       </div>
     </Section>
   );
