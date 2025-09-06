@@ -1,19 +1,26 @@
 import type { Collection } from 'tinacms';
 import { aboutSectionBlockSchema } from '@/components/blocks/about-section';
+import { articleCardsBlockSchema } from '@/components/blocks/article-cards';
+import { articleFeaturedBlockSchema } from '@/components/blocks/article-featured';
 import { calloutBlockSchema } from '@/components/blocks/callout';
 import { contentBlockSchema } from '@/components/blocks/content';
 import { ctaBannerBlockSchema } from '@/components/blocks/cta-banner';
 import { ctaBlockSchema } from '@/components/blocks/call-to-action';
 import { educationCostsBlockSchema } from '@/components/blocks/education-costs';
+import { faqBlockSchema } from '@/components/blocks/faq';
 import { featureBlockSchema } from '@/components/blocks/features';
 import { galleryFeaturedBlockSchema } from '@/components/blocks/gallery-featured';
 import { galleryGridBlockSchema } from '@/components/blocks/gallery-grid';
 import { galleryMasonryBlockSchema } from '@/components/blocks/gallery-masonry';
 import { heroBlockSchema } from '@/components/blocks/hero';
 import { heroSliderBlockSchema } from '@/components/blocks/hero-slider';
+import { markdownArticleBlockSchema } from '@/components/blocks/markdown-article';
 import { newsSectionBlockSchema } from '@/components/blocks/news-section';
 import { programSectionBlockSchema } from '@/components/blocks/program-section';
 import { registrationFlowBlockSchema } from '@/components/blocks/registration-flow';
+import { richContentBlockSchema } from '@/components/blocks/rich-content';
+import { staffCardsBlockSchema } from '@/components/blocks/staff-cards';
+import { staffFeaturedBlockSchema } from '@/components/blocks/staff-featured';
 import { statisticsSectionBlockSchema } from '@/components/blocks/statistics-section';
 import { statsBlockSchema } from '@/components/blocks/stats';
 import { testimonialBlockSchema } from '@/components/blocks/testimonial';
@@ -70,6 +77,13 @@ const Page: Collection = {
         galleryGridBlockSchema,
         galleryMasonryBlockSchema,
         galleryFeaturedBlockSchema,
+        articleFeaturedBlockSchema,
+        articleCardsBlockSchema,
+        staffCardsBlockSchema,
+        staffFeaturedBlockSchema,
+        faqBlockSchema,
+        richContentBlockSchema,
+        markdownArticleBlockSchema,
       ],
     },
   ],
