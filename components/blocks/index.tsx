@@ -10,6 +10,9 @@ import { Stats } from "./stats";
 import { CallToAction } from "./call-to-action";
 import { EducationCosts } from "./education-costs";
 import { RegistrationFlow } from "./registration-flow";
+import { GalleryGrid } from "./gallery-grid";
+import { GalleryMasonry } from "./gallery-masonry";
+import { GalleryFeatured } from "./gallery-featured";
 
 // New landing page blocks
 import { HeroSlider } from "./hero-slider";
@@ -69,6 +72,12 @@ const Block = (block: PageBlocks) => {
       return <EducationCosts data={block} />;
     case "PageBlocksRegistrationFlow":
       return <RegistrationFlow data={block} />;
+    case "PageBlocksGalleryGrid":
+      return <GalleryGrid data={block} />;
+    case "PageBlocksGalleryMasonry":
+      return <GalleryMasonry data={block} />;
+    case "PageBlocksGalleryFeatured":
+      return <GalleryFeatured data={block} />;
     default:
       return null;
   }

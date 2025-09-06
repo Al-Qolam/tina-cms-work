@@ -6,6 +6,9 @@ import { ctaBannerBlockSchema } from '@/components/blocks/cta-banner';
 import { ctaBlockSchema } from '@/components/blocks/call-to-action';
 import { educationCostsBlockSchema } from '@/components/blocks/education-costs';
 import { featureBlockSchema } from '@/components/blocks/features';
+import { galleryFeaturedBlockSchema } from '@/components/blocks/gallery-featured';
+import { galleryGridBlockSchema } from '@/components/blocks/gallery-grid';
+import { galleryMasonryBlockSchema } from '@/components/blocks/gallery-masonry';
 import { heroBlockSchema } from '@/components/blocks/hero';
 import { heroSliderBlockSchema } from '@/components/blocks/hero-slider';
 import { newsSectionBlockSchema } from '@/components/blocks/news-section';
@@ -64,6 +67,9 @@ const Page: Collection = {
         newsSectionBlockSchema,
         educationCostsBlockSchema,
         registrationFlowBlockSchema,
+        galleryGridBlockSchema,
+        galleryMasonryBlockSchema,
+        galleryFeaturedBlockSchema,
       ],
     },
   ],
