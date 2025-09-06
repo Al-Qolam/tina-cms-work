@@ -13,6 +13,11 @@ import { RegistrationFlow } from "./registration-flow";
 import { GalleryGrid } from "./gallery-grid";
 import { GalleryMasonry } from "./gallery-masonry";
 import { GalleryFeatured } from "./gallery-featured";
+import { ArticleFeatured } from "./article-featured";
+import { ArticleCards } from "./article-cards";
+import { StaffCards } from "./staff-cards";
+import { StaffFeatured } from "./staff-featured";
+import { FAQ } from "./faq";
 
 // New landing page blocks
 import { HeroSlider } from "./hero-slider";
@@ -78,6 +83,16 @@ const Block = (block: PageBlocks) => {
       return <GalleryMasonry data={block} />;
     case "PageBlocksGalleryFeatured":
       return <GalleryFeatured data={block} />;
+    case "PageBlocksArticleFeatured":
+      return <ArticleFeatured data={block} />;
+    case "PageBlocksArticleCards":
+      return <ArticleCards data={block} />;
+    case "PageBlocksStaffCards":
+      return <StaffCards data={block} />;
+    case "PageBlocksStaffFeatured":
+      return <StaffFeatured data={block} />;
+    case "PageBlocksFaq":
+      return <FAQ data={block} />;
     default:
       return null;
   }
