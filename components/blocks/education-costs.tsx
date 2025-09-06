@@ -118,12 +118,12 @@ export const CostCard: React.FC<PageBlocksEducationCostsCostItems> = (data) => {
         >
           {data.amount}
         </p>
-        <div 
+        <p 
           data-tina-field={tinaField(data, "description")}
           className="text-sm text-muted-foreground leading-relaxed"
         >
-          <TinaMarkdown content={data.description} />
-        </div>
+          {data.description}
+        </p>
       </CardContent>
     </Card>
   );
@@ -314,7 +314,7 @@ export const educationCostsBlockSchema: Template = {
           name: "amount",
         },
         {
-          type: "rich-text" as const,
+          type: "string" as const,
           label: "Description",
           name: "description",
         },

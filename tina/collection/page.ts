@@ -4,11 +4,13 @@ import { calloutBlockSchema } from '@/components/blocks/callout';
 import { contentBlockSchema } from '@/components/blocks/content';
 import { ctaBannerBlockSchema } from '@/components/blocks/cta-banner';
 import { ctaBlockSchema } from '@/components/blocks/call-to-action';
+import { educationCostsBlockSchema } from '@/components/blocks/education-costs';
 import { featureBlockSchema } from '@/components/blocks/features';
 import { heroBlockSchema } from '@/components/blocks/hero';
 import { heroSliderBlockSchema } from '@/components/blocks/hero-slider';
 import { newsSectionBlockSchema } from '@/components/blocks/news-section';
 import { programSectionBlockSchema } from '@/components/blocks/program-section';
+import { registrationFlowBlockSchema } from '@/components/blocks/registration-flow';
 import { statisticsSectionBlockSchema } from '@/components/blocks/statistics-section';
 import { statsBlockSchema } from '@/components/blocks/stats';
 import { testimonialBlockSchema } from '@/components/blocks/testimonial';
@@ -60,6 +62,8 @@ const Page: Collection = {
         programSectionBlockSchema,
         ctaBannerBlockSchema,
         newsSectionBlockSchema,
+        educationCostsBlockSchema,
+        registrationFlowBlockSchema,
       ],
     },
   ],
