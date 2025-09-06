@@ -24,105 +24,128 @@ blocks:
     autoPlay: true
     autoPlayInterval: 10000
     _template: heroSlider
-  - background: bg-blue-50/80
-    headline: Selamat Datang di Sekolah Kami
-    tagline: Membangun Generasi Unggul dan Berkarakter
-    actions:
-      - label: Profil Sekolah
-        type: button
-        icon:
-          name: BiUser
-          color: white
-        link: /profil-sekolah
-      - label: Program Pendidikan
-        type: link
-        link: /program-pendidikan
-    image:
-      src: /uploads/sekolah-hero.jpg
-      alt: Gedung sekolah utama
-      videoUrl: ''
-    _template: hero
-  - background: bg-zinc-50
-    title: Prestasi Sekolah
+  - aboutTitle: Tentang Sekolah Kami
+    subtitle: Membangun Generasi Unggul
     description: >-
-      Sekolah kami telah meraih berbagai prestasi baik dalam bidang akademik
-      maupun non-akademik yang membanggakan.
-    stats:
-      - stat: 500+
-        type: Siswa Aktif
-      - stat: 50+
-        type: Tenaga Pengajar
-      - stat: 95%
-        type: Tingkat Kelulusan
-    _template: stats
-  - title: Fasilitas Unggulan
-    description: Kami menyediakan fasilitas terbaik untuk mendukung proses pembelajaran
-    items:
+      Sekolah kami telah berdedikasi dalam dunia pendidikan selama lebih dari 35
+      tahun dengan komitmen memberikan pendidikan berkualitas.
+    aboutImage: /uploads/about-school.jpg
+    features:
       - icon:
-          name: BiBook
+          name: BiAward
           color: blue
-          style: float
-        title: Perpustakaan Modern
-        text: >
-          Perpustakaan dengan koleksi buku lengkap dan sistem digital yang
-          memudahkan siswa dalam mengakses informasi dan pengetahuan.
+        featureTitle: Akreditasi A
+        description: Terakreditasi A dari BAN-S/M dengan standar pendidikan tinggi
       - icon:
-          name: BiDesktop
+          name: BiGroup
           color: green
-          style: float
-        title: Laboratorium Komputer
-        text: >
-          Laboratorium komputer dengan perangkat terbaru yang mendukung
-          pembelajaran teknologi informasi dan komunikasi.
+        featureTitle: Tenaga Pengajar Profesional
+        description: 50+ guru berpengalaman dan berkualitas
+    ctaButton:
+      label: Selengkapnya
+      href: /profil-sekolah
+    achievementCard:
+      icon:
+        name: BiTime
+      value: 35+
+      label: Tahun Pengalaman
+    achievementBadge:
+      icon:
+        name: BiTrophy
+      value: 50+
+      label: Penghargaan
+    _template: aboutSection
+  - statisticsTitle: Prestasi Sekolah
+    subtitle: Pencapaian Membanggakan
+    description: >-
+      Sekolah kami bangga dengan berbagai prestasi yang telah diraih dalam
+      bidang akademik maupun non-akademik.
+    statistics:
+      - icon:
+          name: BiGroup
+          color: blue
+        value: '500'
+        label: Siswa Aktif
+        suffix: +
+      - icon:
+          name: BiUser
+          color: green
+        value: '50'
+        label: Tenaga Pengajar
+        suffix: +
+      - icon:
+          name: BiTrophy
+          color: orange
+        value: '95'
+        label: Tingkat Kelulusan
+        suffix: '%'
+      - icon:
+          name: BiAward
+          color: red
+        value: A
+        label: Akreditasi
+    _template: statisticsSection
+  - programTitle: Program Pendidikan
+    subtitle: Jenjang Pendidikan Lengkap
+    description: >-
+      Kami menyediakan program pendidikan dari tingkat dasar hingga menengah
+      atas dengan kurikulum berkualitas.
+    programs:
+      - title: Sekolah Dasar (SD)
+        description: >-
+          Program pendidikan dasar dengan fokus pada literasi, numerasi, dan
+          pembentukan karakter.
+        icon:
+          name: BiChild
+          color: blue
+        features:
+          - Kelas 1-6
+          - Kurikulum Nasional
+          - Kegiatan Ekstrakurikuler
+        image: /uploads/program-sd.jpg
+        href: /program-pendidikan#sd
+    extraFeatures:
       - icon:
           name: BiFootball
-          color: orange
-          style: float
-        title: Lapangan Olahraga
-        text: >
-          Fasilitas olahraga lengkap termasuk lapangan basket, futsal, dan aula
-          serbaguna untuk mendukung kegiatan ekstrakurikuler.
-    _template: features
-  - title: Testimoni dari Orang Tua dan Alumni
+          color: green
+        title: Ekstrakurikuler
+        description: 15+ Pilihan
+    ctaButton:
+      label: Lihat Semua Program
+      href: /program-pendidikan
+    _template: programSection
+  - bannerTitle: Bergabunglah dengan Keluarga Besar Kami
+    subtitle: Daftar Sekarang
     description: >-
-      Kepercayaan orang tua dan kesuksesan alumni adalah kebanggaan terbesar
-      bagi sekolah kami.
-    testimonials:
-      - quote: >-
-          Sekolah ini benar-benar memberikan pendidikan yang berkualitas. Anak
-          saya berkembang sangat baik baik secara akademik maupun karakter.
-        author: Ibu Sari Dewi
-        role: Orang Tua Siswa Kelas 6
-        avatar: /uploads/testimonials/parent1.jpg
-      - quote: >-
-          Guru-guru di sekolah ini sangat peduli dengan perkembangan setiap
-          siswa. Metode pembelajaran yang digunakan sangat efektif.
-        author: Bapak Ahmad Rahman
-        role: Orang Tua Siswa Kelas 4
-        avatar: /uploads/testimonials/parent2.jpg
-      - quote: >-
-          Terima kasih sekolah telah membekali saya dengan ilmu dan karakter
-          yang kuat. Sekarang saya bisa melanjutkan ke jenjang yang lebih
-          tinggi.
-        author: Sarah Putri
-        role: Alumni 2023
-        avatar: /uploads/testimonials/alumni1.jpg
-    _template: testimonial
-  - title: Daftar Sekarang
-    description: >-
-      Bergabunglah dengan keluarga besar sekolah kami dan rasakan pengalaman
-      pendidikan yang berkualitas.
-    actions:
+      Jadilah bagian dari sekolah yang telah mencetak generasi unggul selama
+      puluhan tahun.
+    buttons:
       - label: Daftar PPDB
-        type: button
-        icon:
-          name: BiUserPlus
-          color: white
-          style: ''
-        link: /pendaftaran
+        href: /pendaftaran
+        style: primary
       - label: Hubungi Kami
-        type: link
-        link: /galeri-kontak
-    _template: cta
+        href: /galeri-kontak
+        style: outline
+    style: gradient
+    overlay: true
+    _template: ctaBanner
+  - newsTitle: Berita & Kegiatan Terbaru
+    subtitle: Update Sekolah
+    description: Ikuti perkembangan dan kegiatan terbaru di sekolah kami.
+    news:
+      - title: Prestasi Gemilang Siswa dalam Olimpiade Matematika
+        excerpt: >-
+          Siswa kelas 9 berhasil meraih medali emas dalam kompetisi olimpiade
+          matematika tingkat nasional.
+        image: /uploads/news-1.jpg
+        date: 15 Agustus 2024
+        category: Prestasi
+        slug: prestasi-olimpiade-matematika
+        author: Admin Sekolah
+    maxItems: 4
+    viewAllButton:
+      label: Lihat Semua Berita
+      href: /posts
+    _template: newsSection
 ---
 
