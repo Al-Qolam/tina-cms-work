@@ -47,12 +47,12 @@ export const RegistrationFlow = ({ data }: { data: PageBlocksRegistrationFlow })
             </span>{" "}
             {data.titleRest}
           </h2>
-          <div 
+          <p 
             data-tina-field={tinaField(data, 'description')}
             className="text-base text-gray-700 dark:text-gray-300 md:text-lg"
           >
-            <TinaMarkdown content={data.description} />
-          </div>
+            {data.description}
+          </p>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-2">
@@ -64,12 +64,12 @@ export const RegistrationFlow = ({ data }: { data: PageBlocksRegistrationFlow })
               })}
           </div>
 
-          {data.image && (
+          {data.imageUrl && (
             <div className="relative">
               <img
-                data-tina-field={tinaField(data, 'image')}
+                data-tina-field={tinaField(data, 'imageUrl')}
                 className="inset-0 object-cover object-center w-full rounded shadow-lg h-96 lg:absolute lg:h-full"
-                src={data.image}
+                src={data.imageUrl}
                 alt={data.imageAlt || "Registration illustration"}
               />
             </div>
@@ -166,7 +166,7 @@ export const registrationFlowBlockSchema: Template = {
       titleHighlight: "Alur",
       titleRest: "Pendaftaran PPDB NIBS",
       description: "Ikuti 5 langkah mudah untuk bergabung dengan Nurul Ilmi Boarding School dan menjadi bagian dari generasi Qur'ani yang unggul.",
-      image: "/placeholder.svg?height=600&width=400",
+      imageUrl: "/placeholder.svg?height=600&width=400",
       imageAlt: "Santri NIBS sedang belajar",
       steps: [
         {
@@ -250,14 +250,14 @@ export const registrationFlowBlockSchema: Template = {
       description: "The rest of the title after the highlight",
     },
     {
-      type: "rich-text" as const,
+      type: "string" as const,
       label: "Description",
       name: "description",
     },
     {
-      type: "image" as const,
-      label: "Image",
-      name: "image",
+      type: "string" as const,
+      label: "Image URL",
+      name: "imageUrl",
     },
     {
       type: "string" as const,

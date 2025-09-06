@@ -8,6 +8,8 @@ import { Video } from "./video";
 import { Callout } from "./callout";
 import { Stats } from "./stats";
 import { CallToAction } from "./call-to-action";
+import { EducationCosts } from "./education-costs";
+import { RegistrationFlow } from "./registration-flow";
 
 // New landing page blocks
 import { HeroSlider } from "./hero-slider";
@@ -63,6 +65,10 @@ const Block = (block: PageBlocks) => {
       return <CTABanner data={block} />;
     case "PageBlocksNewsSection":
       return <NewsSection data={block} />;
+    case "PageBlocksEducationCosts":
+      return <EducationCosts data={block} />;
+    case "PageBlocksRegistrationFlow":
+      return <RegistrationFlow data={block} />;
     default:
       return null;
   }
