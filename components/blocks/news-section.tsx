@@ -85,7 +85,8 @@ export const NewsSection = ({ data }: { data: any }) => {
 
   return (
     <Section background={data.background}>
-      {/* Header */}
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
       <div className="text-center mb-16">
         <h3 
           className="text-blue-600 text-lg font-semibold mb-2"
@@ -127,6 +128,7 @@ export const NewsSection = ({ data }: { data: any }) => {
           </Link>
         </div>
       )}
+      </div>
     </Section>
   );
 };

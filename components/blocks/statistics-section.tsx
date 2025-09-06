@@ -129,49 +129,51 @@ export const StatisticsSection = ({ data }: { data: any }) => {
 
   return (
     <Section background={data.background}>
-      {/* Header */}
-      <div className="text-center mb-16">
-        <h3 
-          className={`text-lg font-semibold mb-2 ${getSubtitleClasses(background)}`}
-          data-tina-field={tinaField(data, 'subtitle')}
-        >
-          {data.subtitle}
-        </h3>
-        <h2 
-          className={`text-4xl font-bold mb-6 ${getTextClasses(background)}`}
-          data-tina-field={tinaField(data, 'statisticsTitle')}
-        >
-          {data.statisticsTitle}
-        </h2>
-        <p 
-          className={`text-lg max-w-3xl mx-auto ${getDescriptionClasses(background)}`}
-          data-tina-field={tinaField(data, 'description')}
-        >
-          {data.description}
-        </p>
-      </div>
-
-      {/* Statistics Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
-        {statistics.map((stat: any, index: number) => (
-          <StatCard key={index} stat={stat} index={index} />
-        ))}
-      </div>
-
-      {/* Bottom decoration */}
-      {background.includes('blue') && (
-        <div className="mt-16 flex justify-center">
-          <div className="flex space-x-2">
-            {[...Array(5)].map((_, i) => (
-              <div
-                key={i}
-                className="w-2 h-2 bg-blue-300 rounded-full animate-pulse"
-                style={{ animationDelay: `${i * 0.2}s` }}
-              ></div>
-            ))}
-          </div>
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h3 
+            className={`text-lg font-semibold mb-2 ${getSubtitleClasses(background)}`}
+            data-tina-field={tinaField(data, 'subtitle')}
+          >
+            {data.subtitle}
+          </h3>
+          <h2 
+            className={`text-4xl font-bold mb-6 ${getTextClasses(background)}`}
+            data-tina-field={tinaField(data, 'statisticsTitle')}
+          >
+            {data.statisticsTitle}
+          </h2>
+          <p 
+            className={`text-lg max-w-3xl mx-auto ${getDescriptionClasses(background)}`}
+            data-tina-field={tinaField(data, 'description')}
+          >
+            {data.description}
+          </p>
         </div>
-      )}
+
+        {/* Statistics Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+          {statistics.map((stat: any, index: number) => (
+            <StatCard key={index} stat={stat} index={index} />
+          ))}
+        </div>
+
+        {/* Bottom decoration */}
+        {background.includes('blue') && (
+          <div className="mt-16 flex justify-center">
+            <div className="flex space-x-2">
+              {[...Array(5)].map((_, i) => (
+                <div
+                  key={i}
+                  className="w-2 h-2 bg-blue-300 rounded-full animate-pulse"
+                  style={{ animationDelay: `${i * 0.2}s` }}
+                ></div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
     </Section>
   );
 };

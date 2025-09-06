@@ -31,7 +31,8 @@ const transitionVariants = {
 export const Callout = ({ data }: { data: PageBlocksCallout }) => {
     return (
         <Section background={data.background!} className='py-6'>
-            <AnimatedGroup variants={transitionVariants}>
+            <div className="max-w-7xl mx-auto">
+                <AnimatedGroup variants={transitionVariants}>
                 <Link
                     data-tina-field={tinaField(data, 'url')}
                     href={data.url!}
@@ -53,7 +54,8 @@ export const Callout = ({ data }: { data: PageBlocksCallout }) => {
                         </div>
                     </div>
                 </Link>
-            </AnimatedGroup>
+                </AnimatedGroup>
+            </div>
         </Section>
     );
 };

@@ -10,7 +10,8 @@ import { Section } from '../layout/section';
 export const CallToAction = ({ data }: { data: PageBlocksCta }) => {
     return (
         <Section>
-            <div className="text-center">
+            <div className="max-w-7xl mx-auto">
+                <div className="text-center">
                 <h2 className="text-balance text-4xl font-semibold lg:text-5xl" data-tina-field={tinaField(data, 'title')}>{data.title}</h2>
                 <p className="mt-4" data-tina-field={tinaField(data, 'description')}>{data.description}</p>
 
@@ -32,6 +33,7 @@ export const CallToAction = ({ data }: { data: PageBlocksCta }) => {
                             </Button>
                         </div>
                     ))}
+                </div>
                 </div>
             </div>
         </Section>

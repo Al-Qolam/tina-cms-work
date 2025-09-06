@@ -15,6 +15,7 @@ import { galleryMasonryBlockSchema } from '@/components/blocks/gallery-masonry';
 import { heroBlockSchema } from '@/components/blocks/hero';
 import { heroSliderBlockSchema } from '@/components/blocks/hero-slider';
 import { markdownArticleBlockSchema } from '@/components/blocks/markdown-article';
+import { megaMenuBlockSchema } from '@/components/blocks/mega-menu';
 import { newsSectionBlockSchema } from '@/components/blocks/news-section';
 import { programSectionBlockSchema } from '@/components/blocks/program-section';
 import { registrationFlowBlockSchema } from '@/components/blocks/registration-flow';
@@ -84,6 +85,7 @@ const Page: Collection = {
         faqBlockSchema,
         richContentBlockSchema,
         markdownArticleBlockSchema,
+        megaMenuBlockSchema,
       ],
     },
   ],

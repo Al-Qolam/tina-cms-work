@@ -12,7 +12,8 @@ export const AboutSection = ({ data }: { data: any }) => {
 
   return (
     <Section background={data.background}>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Content */}
         <div className="order-2 lg:order-1">
           <div className="mb-8">
@@ -150,6 +151,7 @@ export const AboutSection = ({ data }: { data: any }) => {
             )}
           </div>
         </div>
+      </div>
       </div>
     </Section>
   );
