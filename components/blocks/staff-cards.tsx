@@ -61,6 +61,7 @@ export const StaffCards = ({ data }: { data: PageBlocksStaffCards }) => {
   const layoutClass = {
     grid: "grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
     list: "grid gap-4",
+    gradient: "flex flex-wrap items-center justify-center gap-6",
   };
 
   const layout = data.layout || "grid";
@@ -212,7 +213,110 @@ export const StaffCards = ({ data }: { data: PageBlocksStaffCards }) => {
 export const StaffCard: React.FC<PageBlocksStaffCardsStaffMembers & { index: number; layout: string }> = (data) => {
   const { index, layout } = data;
   const isListLayout = layout === "list";
+  const isGradientLayout = layout === "gradient";
 
+  // Gradient color schemes
+  const gradientSchemes = {
+    purple: "from-purple-400 via-pink-400 to-orange-400",
+    blue: "from-blue-400 via-cyan-400 to-teal-400",
+    green: "from-green-400 via-emerald-400 to-teal-400",
+    sunset: "from-orange-400 via-red-400 to-pink-400",
+    ocean: "from-blue-400 via-indigo-400 to-purple-400",
+    forest: "from-green-400 via-lime-400 to-yellow-400",
+  };
+
+  const gradientColor = data.gradientColor || "purple";
+  const gradientClass = gradientSchemes[gradientColor as keyof typeof gradientSchemes] || gradientSchemes.purple;
+
+  // Gradient Layout
+  if (isGradientLayout) {
+    return (
+      <div className="max-w-80 bg-black dark:bg-zinc-900 text-white rounded-2xl group">
+        <div className="relative -mt-px overflow-hidden rounded-2xl">
+          {data.avatar ? (
+            <>
+              <img 
+                src={data.avatar}
+                alt={data.name || `Staff member ${index + 1}`}
+                className="h-[270px] w-full rounded-2xl hover:scale-105 transition-all duration-300 object-cover object-top"
+                data-tina-field={tinaField(data, 'avatar')}
+              />
+              <div className="absolute bottom-0 z-10 h-60 w-full bg-gradient-to-t pointer-events-none from-black dark:from-zinc-900 to-transparent"></div>
+            </>
+          ) : (
+            <div className={`h-[270px] w-full rounded-2xl bg-gradient-to-br ${gradientClass} flex items-center justify-center`}>
+              <span className="text-4xl font-bold text-white">
+                {data.name ? data.name.split(' ').map(n => n[0]).join('').toUpperCase() : 'SM'}
+              </span>
+            </div>
+          )}
+          {data.featured && (
+            <Badge className="absolute top-4 right-4 z-20 bg-white/90 text-black dark:bg-black/90 dark:text-white backdrop-blur-sm">
+              Featured
+            </Badge>
+          )}
+        </div>
+        <div className="px-4 pb-6 text-center">
+          <p 
+            className="mt-4 text-lg font-medium"
+            data-tina-field={tinaField(data, 'name')}
+          >
+            {data.name}
+          </p>
+          <p 
+            className={`text-sm font-medium bg-gradient-to-r ${gradientClass} text-transparent bg-clip-text`}
+            data-tina-field={tinaField(data, 'role')}
+          >
+            {data.role}
+          </p>
+          {data.department && (
+            <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">
+              {data.department}
+            </p>
+          )}
+          
+          {/* Social links for gradient layout */}
+          {(data.email || data.linkedin || data.twitter) && (
+            <div className="flex justify-center gap-3 mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+              {data.email && (
+                <a 
+                  href={`mailto:${data.email}`}
+                  className="text-gray-400 hover:text-white transition-colors"
+                  aria-label="Email"
+                >
+                  <Mail className="w-4 h-4" />
+                </a>
+              )}
+              {data.linkedin && (
+                <a 
+                  href={data.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-4 h-4" />
+                </a>
+              )}
+              {data.twitter && (
+                <a 
+                  href={data.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                  aria-label="Twitter"
+                >
+                  <Twitter className="w-4 h-4" />
+                </a>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  // List Layout
   if (isListLayout) {
     return (
       <div className="group flex gap-6 p-6 rounded-xl bg-card border border-border hover:shadow-lg transition-all duration-300">
@@ -530,8 +634,8 @@ export const staffCardsBlockSchema: Template = {
       type: "string" as const,
       label: "Layout",
       name: "layout",
-      options: ["grid", "list"],
-      description: "Choose between grid cards or list view",
+      options: ["grid", "list", "gradient"],
+      description: "Choose between grid cards, list view, or gradient style",
     },
     {
       type: "boolean" as const,
@@ -627,6 +731,13 @@ export const staffCardsBlockSchema: Template = {
           label: "Featured",
           name: "featured",
           description: "Mark as featured staff member",
+        },
+        {
+          type: "string" as const,
+          label: "Gradient Color (for gradient layout)",
+          name: "gradientColor",
+          options: ["purple", "blue", "green", "sunset", "ocean", "forest"],
+          description: "Color scheme for gradient text in gradient layout",
         },
       ],
     },

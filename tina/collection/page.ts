@@ -14,9 +14,11 @@ import { galleryGridBlockSchema } from '@/components/blocks/gallery-grid';
 import { galleryMasonryBlockSchema } from '@/components/blocks/gallery-masonry';
 import { heroBlockSchema } from '@/components/blocks/hero';
 import { heroSliderBlockSchema } from '@/components/blocks/hero-slider';
+import { markdownArticleBlockSchema } from '@/components/blocks/markdown-article';
 import { newsSectionBlockSchema } from '@/components/blocks/news-section';
 import { programSectionBlockSchema } from '@/components/blocks/program-section';
 import { registrationFlowBlockSchema } from '@/components/blocks/registration-flow';
+import { richContentBlockSchema } from '@/components/blocks/rich-content';
 import { staffCardsBlockSchema } from '@/components/blocks/staff-cards';
 import { staffFeaturedBlockSchema } from '@/components/blocks/staff-featured';
 import { statisticsSectionBlockSchema } from '@/components/blocks/statistics-section';
@@ -80,6 +82,8 @@ const Page: Collection = {
         staffCardsBlockSchema,
         staffFeaturedBlockSchema,
         faqBlockSchema,
+        richContentBlockSchema,
+        markdownArticleBlockSchema,
       ],
     },
   ],

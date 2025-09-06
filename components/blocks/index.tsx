@@ -18,6 +18,8 @@ import { ArticleCards } from "./article-cards";
 import { StaffCards } from "./staff-cards";
 import { StaffFeatured } from "./staff-featured";
 import { FAQ } from "./faq";
+import { RichContent } from "./rich-content";
+import { MarkdownArticle } from "./markdown-article";
 
 // New landing page blocks
 import { HeroSlider } from "./hero-slider";
@@ -93,6 +95,10 @@ const Block = (block: PageBlocks) => {
       return <StaffFeatured data={block} />;
     case "PageBlocksFaq":
       return <FAQ data={block} />;
+    case "PageBlocksRichContent":
+      return <RichContent data={block} />;
+    case "PageBlocksMarkdownArticle":
+      return <MarkdownArticle data={block} />;
     default:
       return null;
   }
