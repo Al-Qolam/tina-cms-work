@@ -57,6 +57,41 @@ const Global: Collection = {
               label: "Label",
               name: "label",
             },
+            // Add dropdown support for mega menu
+            {
+              type: "object",
+              label: "Dropdown Items",
+              name: "dropdownItems",
+              list: true,
+              fields: [
+                {
+                  type: "string",
+                  label: "Label",
+                  name: "label",
+                },
+                {
+                  type: "string",
+                  label: "Description",
+                  name: "description",
+                },
+                {
+                  type: "string",
+                  label: "Link",
+                  name: "href",
+                },
+                {
+                  type: "string",
+                  label: "Badge",
+                  name: "badge",
+                },
+              ],
+            },
+            {
+              type: "string",
+              label: "Dropdown Layout",
+              name: "dropdownLayout",
+              options: ["simple", "columns", "featured"],
+            },
           ],
         },
       ],

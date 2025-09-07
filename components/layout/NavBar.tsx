@@ -42,8 +42,8 @@ const defaultMenuItems: NavItem[] = [
 ];
 
 export default function NavBar({ 
-  logo = { src: '/tina.svg', alt: 'Logo Sekolah' },
-  schoolName = "Sekolah Kami",
+  logo = { src: '/logo.png', alt: 'Logo Ponpes Nurul Ilmi' },
+  schoolName = "Ponpes Nurul Ilmi",
   menuItems = defaultMenuItems
 }: NavBarProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

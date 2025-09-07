@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { Icon } from "../../icon";
 import { useLayout } from "../layout-context";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 export const Header = () => {
   const { globalSettings, theme } = useLayout();
