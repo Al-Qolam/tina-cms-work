@@ -1,34 +1,34 @@
-import { tinaField } from "tinacms/dist/react";
 import { Page, PageBlocks } from "../../tina/__generated__/types";
-import { Hero } from "./hero";
-import { Content } from "./content";
-import { Features } from "./features";
-import { Testimonial } from "./testimonial";
-import { Video } from "./video";
-import { Callout } from "./callout";
-import { Stats } from "./stats";
+
+import { AboutSection } from "./about-section";
+import { ArticleCards } from "./article-cards";
+import { ArticleFeatured } from "./article-featured";
+import { CTABanner } from "./cta-banner";
 import { CallToAction } from "./call-to-action";
+import { Callout } from "./callout";
+import { Content } from "./content";
+import { Curriculum } from "./curriculum";
 import { EducationCosts } from "./education-costs";
-import { RegistrationFlow } from "./registration-flow";
+import { FAQ } from "./faq";
+import { Features } from "./features";
+import { GalleryFeatured } from "./gallery-featured";
 import { GalleryGrid } from "./gallery-grid";
 import { GalleryMasonry } from "./gallery-masonry";
-import { GalleryFeatured } from "./gallery-featured";
-import { ArticleFeatured } from "./article-featured";
-import { ArticleCards } from "./article-cards";
-import { StaffCards } from "./staff-cards";
-import { StaffFeatured } from "./staff-featured";
-import { FAQ } from "./faq";
-import { RichContent } from "./rich-content";
+import { Hero } from "./hero";
+import { HeroSlider } from "./hero-slider";
 import { MarkdownArticle } from "./markdown-article";
 import { MegaMenu } from "./mega-menu";
-
-// New landing page blocks
-import { HeroSlider } from "./hero-slider";
-import { AboutSection } from "./about-section";
-import { StatisticsSection } from "./statistics-section";
-import { ProgramSection } from "./program-section";
-import { CTABanner } from "./cta-banner";
 import { NewsSection } from "./news-section";
+import { ProgramSection } from "./program-section";
+import { RegistrationFlow } from "./registration-flow";
+import { RichContent } from "./rich-content";
+import { StaffCards } from "./staff-cards";
+import { StaffFeatured } from "./staff-featured";
+import { StatisticsSection } from "./statistics-section";
+import { Stats } from "./stats";
+import { Testimonial } from "./testimonial";
+import { Video } from "./video";
+import { tinaField } from "tinacms/dist/react";
 
 export const Blocks = (props: Omit<Page, "id" | "_sys" | "_values">) => {
   if (!props.blocks) return null;
@@ -102,6 +102,8 @@ const Block = (block: PageBlocks) => {
       return <MarkdownArticle data={block} />;
     case "PageBlocksMegaMenu":
       return <MegaMenu data={block} />;
+    case "PageBlocksCurriculum":
+      return <Curriculum data={block} />;
     default:
       return null;
   }

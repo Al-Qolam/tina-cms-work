@@ -6,6 +6,7 @@ import { calloutBlockSchema } from '@/components/blocks/callout';
 import { contentBlockSchema } from '@/components/blocks/content';
 import { ctaBannerBlockSchema } from '@/components/blocks/cta-banner';
 import { ctaBlockSchema } from '@/components/blocks/call-to-action';
+import { curriculumBlockSchema } from '@/components/blocks/curriculum';
 import { educationCostsBlockSchema } from '@/components/blocks/education-costs';
 import { faqBlockSchema } from '@/components/blocks/faq';
 import { featureBlockSchema } from '@/components/blocks/features';
@@ -26,14 +27,6 @@ import { statisticsSectionBlockSchema } from '@/components/blocks/statistics-sec
 import { statsBlockSchema } from '@/components/blocks/stats';
 import { testimonialBlockSchema } from '@/components/blocks/testimonial';
 import { videoBlockSchema } from '@/components/blocks/video';
-
-// New landing page block schemas
-
-
-
-
-
-
 
 const Page: Collection = {
   label: 'Pages',
@@ -86,6 +79,7 @@ const Page: Collection = {
         richContentBlockSchema,
         markdownArticleBlockSchema,
         megaMenuBlockSchema,
+        curriculumBlockSchema,
       ],
     },
   ],
