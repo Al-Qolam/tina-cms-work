@@ -1,17 +1,19 @@
 "use client";
+
+import { ArrowRight, ChevronDown, Mail, MapPin, Menu, Phone, X } from "lucide-react";
 import {
   PageBlocksMegaMenu,
   PageBlocksMegaMenuMenuItems,
   PageBlocksMegaMenuMenuItemsSubItems,
 } from "../../tina/__generated__/types";
+import { useEffect, useRef, useState } from "react";
+
+import { Badge } from "../ui/badge";
+import { Button } from "../ui/button";
+import { Icon } from "../icon";
+import Link from "next/link";
 import type { Template } from 'tinacms';
 import { tinaField } from "tinacms/dist/react";
-import { useState, useRef, useEffect } from "react";
-import Link from "next/link";
-import { ChevronDown, Menu, X, ArrowRight, Phone, Mail, MapPin } from "lucide-react";
-import { Button } from "../ui/button";
-import { Badge } from "../ui/badge";
-import { Icon } from "../icon";
 
 export const MegaMenu = ({ data }: { data: PageBlocksMegaMenu }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -100,7 +102,7 @@ export const MegaMenu = ({ data }: { data: PageBlocksMegaMenu }) => {
 
                 {/* Mega Menu Dropdown */}
                 {item?.subItems && item.subItems.length > 0 && activeDropdown === index && (
-                  <div className="absolute left-0 mt-0 w-screen max-w-7xl -translate-x-1/2 left-1/2">
+                  <div className="absolute mt-0 w-screen max-w-7xl -translate-x-1/2 left-1/2">
                     <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                       <div className="relative bg-white dark:bg-zinc-900">
                         <div className="mx-auto max-w-7xl px-8 py-6">
