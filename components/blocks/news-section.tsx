@@ -14,7 +14,7 @@ function NewsCard({ item }: { item: any }) {
         <img
           src={item.image}
           alt={item.title}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+          className="w-full h-full img-cover-safe group-hover:scale-110 transition-transform duration-300"
           data-tina-field={tinaField(item, 'image')}
         />
         <div className="absolute top-4 left-4">

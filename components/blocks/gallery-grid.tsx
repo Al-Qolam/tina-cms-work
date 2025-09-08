@@ -88,7 +88,7 @@ export const GalleryItem: React.FC<PageBlocksGalleryGridImages & { index: number
           <img
             src={data.url}
             alt={data.alt || `Gallery image ${index + 1}`}
-            className={`h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 ${radiusClass}`}
+            className={`img-gallery transition-transform duration-300 group-hover:scale-105 ${radiusClass}`}
             loading="lazy"
           />
         ) : (

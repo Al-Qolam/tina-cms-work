@@ -83,9 +83,9 @@ const defaultSocialLinks: SocialLink[] = [
 ];
 
 export default function Footer({
-  schoolName = 'Sekolah Kami',
+  schoolName = 'Ponpes Nurul Ilmi',
   schoolDescription = 'Lembaga pendidikan yang berkomitmen menghasilkan generasi unggul, berkarakter, dan siap menghadapi tantangan masa depan.',
-  logo = { src: '/tina.svg', alt: 'Logo Sekolah' },
+  logo = { src: '/logo.webp', alt: 'Logo Ponpes Nurul Ilmi' },
   contactInfo = defaultContactInfo,
   sections = defaultSections,
   socialLinks = defaultSocialLinks,
@@ -99,7 +99,7 @@ export default function Footer({
           {/* School Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <img src={logo.src} alt={logo.alt} className="h-12 w-12" />
+              <img src={logo.src} alt={logo.alt} className="h-12 w-auto object-contain" />
               <div>
                 <h3 className="text-2xl font-bold">{schoolName}</h3>
                 <p className="text-blue-300 text-sm">Pendidikan Berkualitas</p>

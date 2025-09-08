@@ -1,5 +1,6 @@
 {
   "header": {
+    "logo": "/logo.webp",
     "icon": {
       "name": "Tina",
       "color": "orange",

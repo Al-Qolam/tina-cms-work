@@ -47,7 +47,7 @@ export const ArticleFeatured = ({ data }: { data: PageBlocksArticleFeatured }) =
                   <img
                     src={data.featuredImage}
                     alt={data.featuredImageAlt || "Featured article"}
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="img-featured transition-transform duration-300 group-hover:scale-105"
                   />
                   {data.featuredCategory && (
                     <div className="absolute top-4 left-4">
@@ -152,7 +152,7 @@ export const SideArticle: React.FC<PageBlocksArticleFeaturedSideArticles & { ind
           <img
             src={data.thumbnail}
             alt={data.thumbnailAlt || `Article ${index + 1}`}
-            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+            className="img-gallery transition-transform duration-300 group-hover:scale-110"
             data-tina-field={tinaField(data, 'thumbnail')}
           />
         </div>

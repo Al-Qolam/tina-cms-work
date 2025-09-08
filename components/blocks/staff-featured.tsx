@@ -52,7 +52,7 @@ export const StaffFeatured = ({ data }: { data: PageBlocksStaffFeatured }) => {
                 <img
                   src={data.avatar}
                   alt={data.name || "Featured staff"}
-                  className="w-full h-full object-cover"
+                  className="img-avatar"
                   data-tina-field={tinaField(data, 'avatar')}
                 />
               ) : (

@@ -69,7 +69,7 @@ export const GalleryFeatured = ({ data }: { data: PageBlocksGalleryFeatured }) =
                 <img
                   src={currentImage.url}
                   alt={currentImage.alt || "Featured gallery image"}
-                  className="h-full w-full object-cover transition-transform duration-500"
+                  className="img-featured transition-transform duration-500"
                 />
               ) : (
                 <div className="flex items-center justify-center h-full text-muted-foreground">
@@ -174,7 +174,7 @@ export const ThumbnailItem: React.FC<ThumbnailItemProps> = (data) => {
           <img
             src={data.url}
             alt={data.alt || `Thumbnail ${index + 1}`}
-            className="h-full w-full object-cover"
+            className="img-gallery"
             loading="lazy"
           />
         ) : (

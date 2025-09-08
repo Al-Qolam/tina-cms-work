@@ -1,0 +1,81 @@
+/* Image Helper Classes - Prevent Image Distortion */
+
+/* Logo Images */
+.img-logo {
+  @apply h-10 w-auto object-contain;
+}
+
+.img-logo-lg {
+  @apply h-12 w-auto object-contain;
+}
+
+.img-logo-sm {
+  @apply h-8 w-auto object-contain;
+}
+
+/* Avatar/Profile Images - Keep Square */
+.img-avatar {
+  @apply object-cover;
+}
+
+/* Card/Thumbnail Images - Keep Aspect Ratio */
+.img-card {
+  @apply w-full h-full object-cover;
+}
+
+/* Featured Images - Full Width */
+.img-featured {
+  @apply w-full h-full object-cover;
+}
+
+/* Gallery Images */
+.img-gallery {
+  @apply w-full h-full object-cover;
+}
+
+/* Content Images - Natural Size */
+.img-content {
+  @apply w-full h-auto object-contain;
+}
+
+/* Hero/Banner Images */
+.img-hero {
+  @apply w-full h-full object-cover object-center;
+}
+
+/* Icon Images */
+.img-icon {
+  @apply w-full h-full object-contain;
+}
+
+/* Safe Image Container */
+.img-container {
+  @apply relative overflow-hidden;
+}
+
+/* Aspect Ratio Containers */
+.aspect-card {
+  @apply aspect-[4/3];
+}
+
+.aspect-wide {
+  @apply aspect-[16/9];
+}
+
+.aspect-square {
+  @apply aspect-square;
+}
+
+.aspect-portrait {
+  @apply aspect-[3/4];
+}
+
+/* Prevent Distortion */
+.img-safe {
+  @apply object-contain w-full h-full;
+}
+
+/* Cover without distortion */
+.img-cover-safe {
+  @apply object-cover w-full h-full;
+}

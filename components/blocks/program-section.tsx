@@ -49,7 +49,7 @@ export const ProgramSection = ({ data }: { data: any }) => {
               <img
                 src={program.image}
                 alt={program.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                className="w-full h-full img-cover-safe group-hover:scale-110 transition-transform duration-300"
                 data-tina-field={tinaField(program, 'image')}
               />
               <div className="absolute top-4 left-4">
