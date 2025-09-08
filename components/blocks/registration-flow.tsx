@@ -68,7 +68,7 @@ export const RegistrationFlow = ({ data }: { data: PageBlocksRegistrationFlow })
             <div className="relative">
               <img
                 data-tina-field={tinaField(data, 'imageUrl')}
-                className="inset-0 object-cover object-center w-full rounded shadow-lg h-96 lg:absolute lg:h-full"
+                className="inset-0 img-cover-safe object-center w-full rounded shadow-lg h-96 lg:absolute lg:h-full"
                 src={data.imageUrl}
                 alt={data.imageAlt || "Registration illustration"}
               />

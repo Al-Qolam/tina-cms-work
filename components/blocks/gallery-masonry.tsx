@@ -108,7 +108,7 @@ export const MasonryItem: React.FC<PageBlocksGalleryMasonryImages & { index: num
             <img
               src={data.url}
               alt={data.alt || `Gallery image ${index + 1}`}
-              className={`w-full ${aspectClass ? 'h-full object-cover' : 'h-auto'} transition-transform duration-300 group-hover:scale-105 ${radiusClass}`}
+              className={`${aspectClass ? 'img-gallery' : 'img-content'} transition-transform duration-300 group-hover:scale-105 ${radiusClass}`}
               loading="lazy"
             />
           ) : (

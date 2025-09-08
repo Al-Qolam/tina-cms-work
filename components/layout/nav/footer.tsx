@@ -13,12 +13,20 @@ export const Footer = () => {
       <div className="mx-auto max-w-5xl px-6">
         <div className="mt-12 flex flex-wrap items-center gap-6 border-t py-6 flex-col md:flex-row md:justify-between">
 
-          <div className="order-last flex justify-center md:order-first md:justify-start">
-            <Link href="/" aria-label="go home">
-              <Icon
-                parentColor={header!.color!}
-                data={header!.icon}
-              />
+          <div className="order-last flex justify-center items-center md:order-first md:justify-start">
+            <Link href="/" aria-label="go home" className="flex items-center space-x-2">
+              {header?.logo ? (
+                <img 
+                  src={header.logo} 
+                  alt={header?.name || "Logo"}
+                  className="h-8 w-auto object-contain"
+                />
+              ) : (
+                <Icon
+                  parentColor={header!.color!}
+                  data={header!.icon}
+                />
+              )}
             </Link>
             <span className="self-center text-muted-foreground text-sm ml-2">© {new Date().getFullYear()} {header?.name}, All rights reserved</span>
           </div>

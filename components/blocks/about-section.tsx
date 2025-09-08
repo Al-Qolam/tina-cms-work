@@ -89,7 +89,7 @@ export const AboutSection = ({ data }: { data: any }) => {
             <img
               src={data.aboutImage}
               alt={data.aboutTitle}
-              className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-lg"
+              className="w-full h-96 lg:h-[500px] img-featured rounded-2xl shadow-lg"
               data-tina-field={tinaField(data, 'aboutImage')}
             />
             

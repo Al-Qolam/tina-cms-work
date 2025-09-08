@@ -17,6 +17,12 @@ const Global: Collection = {
       label: "Header",
       name: "header",
       fields: [
+        {
+          type: "image",
+          label: "Logo",
+          name: "logo",
+          description: "Upload logo image (will use icon if not provided)",
+        },
         iconSchema as any,
         {
           type: "string",

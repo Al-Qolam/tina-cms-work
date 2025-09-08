@@ -238,7 +238,7 @@ export const StaffCard: React.FC<PageBlocksStaffCardsStaffMembers & { index: num
               <img 
                 src={data.avatar}
                 alt={data.name || `Staff member ${index + 1}`}
-                className="h-[270px] w-full rounded-2xl hover:scale-105 transition-all duration-300 object-cover object-top"
+                className="h-[270px] w-full rounded-2xl hover:scale-105 transition-all duration-300 img-cover-safe object-top"
                 data-tina-field={tinaField(data, 'avatar')}
               />
               <div className="absolute bottom-0 z-10 h-60 w-full bg-gradient-to-t pointer-events-none from-black dark:from-zinc-900 to-transparent"></div>
@@ -327,7 +327,7 @@ export const StaffCard: React.FC<PageBlocksStaffCardsStaffMembers & { index: num
               <img
                 src={data.avatar}
                 alt={data.name || `Staff member ${index + 1}`}
-                className="w-full h-full object-cover"
+                className="img-avatar"
                 data-tina-field={tinaField(data, 'avatar')}
               />
             ) : (
@@ -398,7 +398,7 @@ export const StaffCard: React.FC<PageBlocksStaffCardsStaffMembers & { index: num
           <img
             src={data.avatar}
             alt={data.name || `Staff member ${index + 1}`}
-            className="w-full h-full object-cover"
+            className="img-avatar"
             data-tina-field={tinaField(data, 'avatar')}
           />
         ) : (

@@ -102,7 +102,7 @@ export const ArticleCard: React.FC<PageBlocksArticleCardsArticles & { index: num
           <img
             src={data.image}
             alt={data.imageAlt || `Article ${index + 1}`}
-            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            className="img-featured transition-transform duration-300 group-hover:scale-105"
             data-tina-field={tinaField(data, 'image')}
           />
           {data.category && (

@@ -81,7 +81,7 @@ export const MarkdownArticle = ({ data }: { data: PageBlocksMarkdownArticle }) =
                   <img
                     src={data.heroImage}
                     alt={data.heroImageAlt || "Article hero"}
-                    className="w-full h-[400px] object-cover lg:rounded-xl"
+                    className="w-full h-[400px] img-featured lg:rounded-xl"
                     data-tina-field={tinaField(data, 'heroImage')}
                   />
                 </div>
@@ -122,7 +122,7 @@ export const MarkdownArticle = ({ data }: { data: PageBlocksMarkdownArticle }) =
                       <img
                         src={data.authorAvatar}
                         alt={data.authorName || "Author"}
-                        className="w-12 h-12 rounded-full object-cover"
+                        className="w-12 h-12 rounded-full img-avatar"
                         data-tina-field={tinaField(data, 'authorAvatar')}
                       />
                     )}

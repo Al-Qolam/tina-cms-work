@@ -42,7 +42,7 @@ const defaultMenuItems: NavItem[] = [
 ];
 
 export default function NavBar({ 
-  logo = { src: '/logo.png', alt: 'Logo Ponpes Nurul Ilmi' },
+  logo = { src: '/logo.webp', alt: 'Logo Ponpes Nurul Ilmi' },
   schoolName = "Ponpes Nurul Ilmi",
   menuItems = defaultMenuItems
 }: NavBarProps) {
@@ -55,7 +55,7 @@ export default function NavBar({
         <div className="flex justify-between items-center py-4">
           {/* Logo and School Name */}
           <Link href="/" className="flex items-center space-x-3">
-            <img src={logo.src} alt={logo.alt} className="h-10 w-10" />
+            <img src={logo.src} alt={logo.alt} className="h-10 w-auto object-contain" />
             <div className="flex flex-col">
               <span className="text-xl font-bold text-blue-900">{schoolName}</span>
               <span className="text-xs text-gray-600">Pendidikan Berkualitas</span>

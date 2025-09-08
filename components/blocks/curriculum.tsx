@@ -322,12 +322,6 @@ const SubjectCard = ({ subject }: { subject: PageBlocksCurriculumLevelsSubjects 
               <span className="font-semibold">{subject.teacher}</span>
             </div>
           )}
-
-          {hasProgress && (
-            <div className="pt-2">
-              <Progress value={progressValue} className="h-2" />
-            </div>
-          )}
         </div>
 
         {subject.topics && subject.topics.length > 0 && (

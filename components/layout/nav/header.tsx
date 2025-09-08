@@ -23,14 +23,22 @@ export const Header = () => {
                 href="/"
                 aria-label="home"
                 className="flex items-center space-x-2">
-                <Icon
-                  parentColor={header.color!}
-                  data={{
-                    name: header.icon!.name,
-                    color: header.icon!.color,
-                    style: header.icon!.style,
-                  }}
-                />{" "}
+                {header.logo ? (
+                  <img 
+                    src={header.logo} 
+                    alt={header.name || "Logo"}
+                    className="h-10 w-auto object-contain"
+                  />
+                ) : (
+                  <Icon
+                    parentColor={header.color!}
+                    data={{
+                      name: header.icon!.name,
+                      color: header.icon!.color,
+                      style: header.icon!.style,
+                    }}
+                  />
+                )}
                 <span>
                   {header.name}
                 </span>
