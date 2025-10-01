@@ -57,10 +57,18 @@ export default function CTABanner({
   };
 
   return (
-    <section 
+    <section
       className={`relative py-20 ${getBackgroundClasses()}`}
-      style={style === 'image' ? { backgroundImage: `url(${backgroundImage})` } : {}}
     >
+      {/* Background Image */}
+      {style === 'image' && backgroundImage && (
+        <img
+          src={backgroundImage}
+          alt="CTA Banner Background"
+          className="absolute inset-0 w-full h-full img-cover-safe"
+        />
+      )}
+
       {/* Overlay */}
       {(style === 'image' && overlay) && (
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>

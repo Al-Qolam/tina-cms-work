@@ -96,10 +96,12 @@ export default function HeroSlider({
             }`}
         >
           {/* Background Image */}
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${slide.image})` }}
-          >
+          <div className="absolute inset-0">
+            <img
+              src={slide.image}
+              alt={slide.title || 'Hero slide'}
+              className="absolute inset-0 w-full h-full img-cover-safe"
+            />
             <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           </div>
 
