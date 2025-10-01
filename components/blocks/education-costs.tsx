@@ -19,9 +19,9 @@ export const EducationCosts = ({ data }: { data: PageBlocksEducationCosts }) => 
   return (
     <Section background={data.background!}>
       <div className="@container mx-auto max-w-6xl px-6">
-        <Card className="w-full shadow-lg border-0 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-zinc-900 dark:to-zinc-800">
+        <Card className="w-full shadow-lg border-0 bg-gradient-to-br from-accent/10 to-accent/20 dark:from-zinc-900 dark:to-zinc-800">
           <CardHeader className="text-center pb-6">
-            <div className="mx-auto w-16 h-16 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center mb-4">
+            <div className="mx-auto w-16 h-16 bg-accent/30 dark:bg-accent/10 rounded-full flex items-center justify-center mb-4">
               {data.headerIcon && (
                 <Icon
                   tinaField={tinaField(data, "headerIcon")}
@@ -29,9 +29,9 @@ export const EducationCosts = ({ data }: { data: PageBlocksEducationCosts }) => 
                 />
               )}
             </div>
-            <CardTitle 
-              data-tina-field={tinaField(data, 'title')} 
-              className="text-3xl font-bold text-blue-800 dark:text-blue-200 text-balance"
+            <CardTitle
+              data-tina-field={tinaField(data, 'title')}
+              className="text-3xl font-bold text-primary dark:text-accent text-balance"
             >
               {data.title}
             </CardTitle>

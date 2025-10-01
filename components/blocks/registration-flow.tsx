@@ -34,7 +34,7 @@ export const RegistrationFlow = ({ data }: { data: PageBlocksRegistrationFlow })
               <svg
                 viewBox="0 0 52 24"
                 fill="currentColor"
-                className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-100 dark:text-blue-900/50 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
+                className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-accent/30 dark:text-accent/10 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
               >
                 <defs>
                   <pattern id="registration-pattern" x="0" y="0" width=".135" height=".30">

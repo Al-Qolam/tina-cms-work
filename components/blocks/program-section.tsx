@@ -16,8 +16,8 @@ export const ProgramSection = ({ data }: { data: any }) => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-        <h3 
-          className="text-blue-600 text-lg font-semibold mb-2"
+        <h3
+          className="text-primary text-lg font-semibold mb-2"
           data-tina-field={tinaField(data, 'subtitle')}
         >
           {data.subtitle}
@@ -53,10 +53,10 @@ export const ProgramSection = ({ data }: { data: any }) => {
                 data-tina-field={tinaField(program, 'image')}
               />
               <div className="absolute top-4 left-4">
-                <Icon 
-                  data={{ 
-                    name: program.icon?.name || 'BiBook', 
-                    color: program.icon?.color || 'blue',
+                <Icon
+                  data={{
+                    name: program.icon?.name || 'BiBook',
+                    color: program.icon?.color || 'primary',
                     style: 'circle',
                     size: 'large'
                   }}
@@ -86,12 +86,12 @@ export const ProgramSection = ({ data }: { data: any }) => {
                 <div className="space-y-2 mb-6">
                   {program.features.map((feature: any, featureIndex: number) => (
                     <div key={featureIndex} className="flex items-center space-x-2">
-                      <Icon 
-                        data={{ 
-                          name: 'BiCheck', 
-                          color: program.icon?.color || 'blue',
+                      <Icon
+                        data={{
+                          name: 'BiCheck',
+                          color: program.icon?.color || 'primary',
                           size: 'small'
-                        }} 
+                        }}
                       />
                       <span className="text-sm text-gray-700">{feature}</span>
                     </div>
@@ -103,14 +103,14 @@ export const ProgramSection = ({ data }: { data: any }) => {
               {program.href && (
                 <Link
                   href={program.href}
-                  className={`inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium transition-colors group`}
+                  className={`inline-flex items-center space-x-2 text-primary hover:text-primary/80 font-medium transition-colors group`}
                   data-tina-field={tinaField(program, 'href')}
                 >
                   <span>Pelajari Lebih Lanjut</span>
-                  <Icon 
-                    data={{ 
-                      name: 'BiChevronRight', 
-                      color: 'blue',
+                  <Icon
+                    data={{
+                      name: 'BiChevronRight',
+                      color: 'primary',
                       size: 'small'
                     }}
                     className="group-hover:translate-x-1 transition-transform"
@@ -131,10 +131,10 @@ export const ProgramSection = ({ data }: { data: any }) => {
               className="text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow"
               data-tina-field={tinaField(item)}
             >
-              <Icon 
-                data={{ 
-                  name: item.icon?.name || 'BiStar', 
-                  color: item.icon?.color || 'blue',
+              <Icon
+                data={{
+                  name: item.icon?.name || 'BiStar',
+                  color: item.icon?.color || 'primary',
                   style: 'circle',
                   size: 'large'
                 }}
@@ -163,7 +163,7 @@ export const ProgramSection = ({ data }: { data: any }) => {
         <div className="text-center">
           <Link
             href={data.ctaButton.href}
-            className="inline-flex items-center space-x-2 bg-blue-600 text-white px-8 py-4 rounded-full font-medium hover:bg-blue-700 transition-colors text-lg"
+            className="inline-flex items-center space-x-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-medium hover:bg-primary/90 transition-colors text-lg"
             data-tina-field={tinaField(data, 'ctaButton')}
           >
             <span>{data.ctaButton.label}</span>
@@ -189,7 +189,7 @@ export const programSectionBlockSchema: Template = {
         {
           title: 'Sekolah Dasar (SD)',
           description: 'Program pendidikan dasar dengan fokus pada literasi, numerasi, dan pembentukan karakter.',
-          icon: { name: 'BiChild', color: 'blue' },
+          icon: { name: 'BiChild', color: 'primary' },
           features: ['Kelas 1-6', 'Kurikulum Nasional', 'Kegiatan Ekstrakurikuler'],
           image: '/uploads/program-sd.jpg',
           href: '/program-pendidikan#sd'
