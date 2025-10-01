@@ -102,7 +102,7 @@ export default function ProgramSection({
                       style: 'circle',
                       size: 'large'
                     }}
-                    className="bg-white bg-opacity-90"
+                    className="bg-white/90"
                   />
                 </div>
               </div>

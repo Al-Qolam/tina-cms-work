@@ -102,29 +102,29 @@ export default function HeroSlider({
               alt={slide.title || 'Hero slide'}
               className="absolute inset-0 w-full h-full img-cover-safe"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+            <div className="absolute inset-0 bg-black/40"></div>
           </div>
 
           {/* Content */}
           <div className="relative z-10 flex items-center justify-center h-full">
             <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto text-center text-white">
-                <h2 className="text-lg md:text-xl font-medium mb-4 text-blue-200">
+              <div className="max-w-3xl mx-auto text-center text-white">
+                <h2 className="text-sm md:text-base font-medium mb-3 text-blue-200">
                   {slide.subtitle}
                 </h2>
-                <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
                   {slide.title}
                 </h1>
-                <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
+                <p className="text-base md:text-lg mb-6 text-gray-200 max-w-2xl mx-auto">
                   {slide.description}
                 </p>
 
                 {/* Buttons */}
-                <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4">
                   {slide.primaryButton && (
                     <Link
                       href={slide.primaryButton.href}
-                      className="bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-blue-700 transition-colors inline-flex items-center space-x-2"
+                      className="bg-blue-600 text-white px-6 py-3 rounded-full text-base font-medium hover:bg-blue-700 hover:scale-105 transition-all duration-300 inline-flex items-center space-x-2"
                     >
                       <span>{slide.primaryButton.label}</span>
                       <Icon data={{ name: 'BiChevronRight', size: 'small' }} />
@@ -133,7 +133,7 @@ export default function HeroSlider({
                   {slide.secondaryButton && (
                     <Link
                       href={slide.secondaryButton.href}
-                      className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-white hover:text-blue-900 transition-colors"
+                      className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full text-base font-medium hover:bg-white hover:text-blue-900 hover:scale-105 transition-all duration-300"
                     >
                       {slide.secondaryButton.label}
                     </Link>
@@ -148,14 +148,14 @@ export default function HeroSlider({
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 text-white p-3 rounded-full hover:bg-opacity-30 transition-all z-20"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 text-white p-3 rounded-full hover:bg-white/30 transition-all z-20"
       >
         <Icon data={{ name: 'BiChevronLeft', size: 'medium' }} />
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 text-white p-3 rounded-full hover:bg-opacity-30 transition-all z-20"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 text-white p-3 rounded-full hover:bg-white/30 transition-all z-20"
       >
         <Icon data={{ name: 'BiChevronRight', size: 'medium' }} />
       </button>
@@ -168,7 +168,7 @@ export default function HeroSlider({
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all ${index === currentSlide
                 ? 'bg-white scale-125'
-                : 'bg-white bg-opacity-50 hover:bg-opacity-75'
+                : 'bg-white/50 hover:bg-white/75'
               }`}
           />
         ))}

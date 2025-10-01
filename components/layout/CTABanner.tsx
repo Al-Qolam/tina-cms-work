@@ -71,7 +71,7 @@ export default function CTABanner({
 
       {/* Overlay */}
       {(style === 'image' && overlay) && (
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
       )}
 
       {/* Background Pattern */}
@@ -87,7 +87,7 @@ export default function CTABanner({
         <div className="text-center">
           {/* Subtitle */}
           <div className="mb-4">
-            <span className="inline-flex items-center space-x-2 bg-white bg-opacity-20 text-white px-4 py-2 rounded-full text-sm font-medium">
+            <span className="inline-flex items-center space-x-2 bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium">
               <Icon data={{ name: 'BiStar', size: 'xs' }} />
               <span>{subtitle}</span>
             </span>
@@ -149,9 +149,9 @@ export default function CTABanner({
       </div>
       
       {/* Floating shapes */}
-      <div className="absolute top-20 right-20 w-16 h-16 bg-white bg-opacity-10 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-20 left-20 w-12 h-12 bg-white bg-opacity-10 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute top-1/2 left-10 w-8 h-8 bg-white bg-opacity-10 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-20 right-20 w-16 h-16 bg-white/10 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-20 left-20 w-12 h-12 bg-white/10 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-1/2 left-10 w-8 h-8 bg-white/10 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
     </section>
   );
 }

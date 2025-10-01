@@ -60,7 +60,7 @@ export const ProgramSection = ({ data }: { data: any }) => {
                     style: 'circle',
                     size: 'large'
                   }}
-                  className="bg-white bg-opacity-90"
+                  className="bg-white/90"
                   tinaField={tinaField(program, 'icon')}
                 />
               </div>
