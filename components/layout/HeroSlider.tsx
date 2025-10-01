@@ -1,7 +1,9 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+
+import React, { useEffect, useState } from 'react';
+
 import { Icon } from '@/components/icon';
+import Link from 'next/link';
 
 interface HeroSlide {
   id: number;
@@ -55,8 +57,8 @@ const defaultSlides: HeroSlide[] = [
   }
 ];
 
-export default function HeroSlider({ 
-  slides = defaultSlides, 
+export default function HeroSlider({
+  slides = defaultSlides,
   autoPlay = true,
   autoPlayInterval = 5000
 }: HeroSliderProps) {
@@ -90,12 +92,11 @@ export default function HeroSlider({
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'
+            }`}
         >
           {/* Background Image */}
-          <div 
+          <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${slide.image})` }}
           >
@@ -115,7 +116,7 @@ export default function HeroSlider({
                 <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
                   {slide.description}
                 </p>
-                
+
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                   {slide.primaryButton && (
@@ -149,7 +150,7 @@ export default function HeroSlider({
       >
         <Icon data={{ name: 'BiChevronLeft', size: 'medium' }} />
       </button>
-      
+
       <button
         onClick={nextSlide}
         className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 text-white p-3 rounded-full hover:bg-opacity-30 transition-all z-20"
@@ -163,24 +164,14 @@ export default function HeroSlider({
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
-              index === currentSlide 
-                ? 'bg-white scale-125' 
+            className={`w-3 h-3 rounded-full transition-all ${index === currentSlide
+                ? 'bg-white scale-125'
                 : 'bg-white bg-opacity-50 hover:bg-opacity-75'
-            }`}
+              }`}
           />
         ))}
       </div>
 
-      {/* Scroll Down Indicator */}
-      <div className="absolute bottom-8 right-8 z-20">
-        <div className="text-white text-center">
-          <p className="text-sm mb-2">Scroll Down</p>
-          <div className="animate-bounce">
-            <Icon data={{ name: 'BiChevronDown', size: 'medium' }} />
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

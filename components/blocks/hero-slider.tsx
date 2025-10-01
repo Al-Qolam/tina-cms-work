@@ -1,11 +1,13 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+
+import React, { useEffect, useState } from 'react';
+import { Section, sectionBlockSchemaField } from '../layout/section';
+
+import { Icon } from '../icon';
 import Link from 'next/link';
 import { Template } from 'tinacms';
-import { tinaField } from 'tinacms/dist/react';
-import { Icon } from '../icon';
 import { iconSchema } from '@/tina/fields/icon';
-import { Section, sectionBlockSchemaField } from '../layout/section';
+import { tinaField } from 'tinacms/dist/react';
 
 export const HeroSlider = ({ data }: { data: any }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -41,13 +43,12 @@ export const HeroSlider = ({ data }: { data: any }) => {
       {slides.map((slide: any, index: number) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'
+            }`}
           data-tina-field={tinaField(slide)}
         >
           {/* Background Image */}
-          <div 
+          <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${slide.slideImage})` }}
           >
@@ -58,25 +59,25 @@ export const HeroSlider = ({ data }: { data: any }) => {
           <div className="relative z-10 flex items-center justify-center h-full">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center text-white">
-                <h2 
+                <h2
                   className="text-lg md:text-xl font-medium mb-4 text-blue-200"
                   data-tina-field={tinaField(slide, 'subtitle')}
                 >
                   {slide.subtitle}
                 </h2>
-                <h1 
+                <h1
                   className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
                   data-tina-field={tinaField(slide, 'slideTitle')}
                 >
                   {slide.slideTitle}
                 </h1>
-                <p 
+                <p
                   className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto"
                   data-tina-field={tinaField(slide, 'description')}
                 >
                   {slide.description}
                 </p>
-                
+
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                   {slide.primaryButton && (
@@ -114,7 +115,7 @@ export const HeroSlider = ({ data }: { data: any }) => {
           >
             <Icon data={{ name: 'BiChevronLeft', size: 'medium' }} />
           </button>
-          
+
           <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 text-white p-3 rounded-full hover:bg-opacity-30 transition-all z-20"
@@ -128,26 +129,16 @@ export const HeroSlider = ({ data }: { data: any }) => {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all ${
-                  index === currentSlide 
-                    ? 'bg-white scale-125' 
+                className={`w-3 h-3 rounded-full transition-all ${index === currentSlide
+                    ? 'bg-white scale-125'
                     : 'bg-white bg-opacity-50 hover:bg-opacity-75'
-                }`}
+                  }`}
               />
             ))}
           </div>
         </>
       )}
 
-      {/* Scroll Down Indicator */}
-      <div className="absolute bottom-8 right-8 z-20">
-        <div className="text-white text-center">
-          <p className="text-sm mb-2">Scroll Down</p>
-          <div className="animate-bounce">
-            <Icon data={{ name: 'BiChevronDown', size: 'medium' }} />
-          </div>
-        </div>
-      </div>
     </Section>
   );
 };
