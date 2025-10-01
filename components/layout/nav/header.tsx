@@ -12,11 +12,23 @@ export const Header = () => {
   const header = globalSettings!.header!;
 
   const [menuState, setMenuState] = React.useState(false)
+  const [isScrolled, setIsScrolled] = React.useState(false)
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <header>
       <nav
         data-state={menuState && 'active'}
-        className="bg-background/50 fixed z-20 w-full border-b backdrop-blur-3xl">
+        className={`fixed z-20 w-full border-b backdrop-blur-3xl transition-all duration-300 ${
+          isScrolled ? 'bg-background shadow-lg' : 'bg-background/50'
+        }`}>
         <div className="mx-auto max-w-7xl px-6 transition-all duration-300">
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
             <div className="flex w-full items-center justify-between gap-12">
