@@ -46,7 +46,7 @@ export const CTABanner = ({ data }: { data: any }) => {
 
       {/* Overlay */}
       {(style === 'image' && overlay) && (
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
       )}
 
       {/* Background Pattern */}
@@ -63,7 +63,7 @@ export const CTABanner = ({ data }: { data: any }) => {
           {/* Subtitle */}
           <div className="mb-4">
             <span 
-              className="inline-flex items-center space-x-2 bg-white bg-opacity-20 text-white px-4 py-2 rounded-full text-sm font-medium"
+              className="inline-flex items-center space-x-2 bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium"
               data-tina-field={tinaField(data, 'subtitle')}
             >
               <Icon data={{ name: 'BiStar', size: 'xs' }} />
