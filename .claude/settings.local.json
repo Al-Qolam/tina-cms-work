@@ -13,7 +13,8 @@
       "Bash(bun tinacms build:*)",
       "Bash(npx @tinacms/cli build:*)",
       "Bash(bun run:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(convert:*)"
     ],
     "deny": [],
     "ask": []
