@@ -1,10 +1,11 @@
 "use client";
 
-import React from "react";
-import Link from "next/link";
+import { Menu, X } from "lucide-react";
+
 import { Icon } from "../../icon";
+import Link from "next/link";
+import React from "react";
 import { useLayout } from "../layout-context";
-import { Menu, X, ChevronDown } from "lucide-react";
 
 export const Header = () => {
   const { globalSettings, theme } = useLayout();
@@ -24,10 +25,10 @@ export const Header = () => {
                 aria-label="home"
                 className="flex items-center space-x-2">
                 {header.logo ? (
-                  <img 
-                    src={header.logo} 
+                  <img
+                    src={header.logo}
                     alt={header.name || "Logo"}
-                    className="h-10 w-auto object-contain"
+                    className="h-14 w-auto object-contain md:h-16"
                   />
                 ) : (
                   <Icon
@@ -39,7 +40,7 @@ export const Header = () => {
                     }}
                   />
                 )}
-                <span>
+                <span className="font-semibold text-lg md:text-xl">
                   {header.name}
                 </span>
               </Link>
