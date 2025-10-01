@@ -15,23 +15,23 @@ export const CTABanner = ({ data }: { data: any }) => {
   const getButtonClasses = (buttonStyle?: string) => {
     switch (buttonStyle) {
       case 'primary':
-        return 'bg-white text-blue-900 hover:bg-gray-100';
+        return 'bg-white text-primary hover:bg-gray-100';
       case 'secondary':
-        return 'bg-blue-700 text-white hover:bg-blue-800';
+        return 'bg-primary/80 text-white hover:bg-primary';
       case 'outline':
       default:
-        return 'border-2 border-white text-white hover:bg-white hover:text-blue-900';
+        return 'border-2 border-white text-white hover:bg-white hover:text-primary';
     }
   };
 
   return (
-    <Section 
+    <Section
       className={`relative py-20 ${
-        style === 'gradient' 
-          ? 'bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900' 
-          : style === 'image' && backgroundImage 
+        style === 'gradient'
+          ? 'bg-gradient-to-r from-primary via-primary/90 to-primary'
+          : style === 'image' && backgroundImage
             ? 'bg-cover bg-center bg-no-repeat'
-            : 'bg-blue-900'
+            : 'bg-primary'
       }`}
       style={style === 'image' ? { backgroundImage: `url(${backgroundImage})` } : {}}
       background={data.background}
@@ -72,8 +72,8 @@ export const CTABanner = ({ data }: { data: any }) => {
           </h2>
 
           {/* Description */}
-          <p 
-            className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto leading-relaxed"
+          <p
+            className="text-xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed"
             data-tina-field={tinaField(data, 'description')}
           >
             {data.description}

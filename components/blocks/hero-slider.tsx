@@ -60,7 +60,7 @@ export const HeroSlider = ({ data }: { data: any }) => {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center text-white">
                 <h2
-                  className="text-lg md:text-xl font-medium mb-4 text-blue-200"
+                  className="text-lg md:text-xl font-medium mb-4 text-accent"
                   data-tina-field={tinaField(slide, 'subtitle')}
                 >
                   {slide.subtitle}
@@ -83,7 +83,7 @@ export const HeroSlider = ({ data }: { data: any }) => {
                   {slide.primaryButton && (
                     <Link
                       href={slide.primaryButton.href}
-                      className="bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-blue-700 transition-colors inline-flex items-center space-x-2"
+                      className="bg-primary text-primary-foreground px-8 py-4 rounded-full text-lg font-medium hover:bg-primary/90 transition-colors inline-flex items-center space-x-2"
                       data-tina-field={tinaField(slide, 'primaryButton')}
                     >
                       <span>{slide.primaryButton.label}</span>
@@ -93,7 +93,7 @@ export const HeroSlider = ({ data }: { data: any }) => {
                   {slide.secondaryButton && (
                     <Link
                       href={slide.secondaryButton.href}
-                      className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-white hover:text-blue-900 transition-colors"
+                      className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-white hover:text-primary transition-colors"
                       data-tina-field={tinaField(slide, 'secondaryButton')}
                     >
                       {slide.secondaryButton.label}

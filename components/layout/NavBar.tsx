@@ -57,7 +57,7 @@ export default function NavBar({
           <Link href="/" className="flex items-center space-x-3">
             <img src={logo.src} alt={logo.alt} className="h-10 w-auto object-contain" />
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-blue-900">{schoolName}</span>
+              <span className="text-xl font-bold text-primary">{schoolName}</span>
               <span className="text-xs text-gray-600">Pendidikan Berkualitas</span>
             </div>
           </Link>
@@ -67,8 +67,8 @@ export default function NavBar({
             {menuItems.map((item, index) => (
               <div key={index} className="relative group">
                 {item.children ? (
-                  <div 
-                    className="flex items-center space-x-1 text-gray-700 hover:text-blue-900 cursor-pointer py-2"
+                  <div
+                    className="flex items-center space-x-1 text-gray-700 hover:text-primary cursor-pointer py-2"
                     onMouseEnter={() => setActiveDropdown(item.label)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
@@ -81,7 +81,7 @@ export default function NavBar({
                           <Link
                             key={childIndex}
                             href={child.href}
-                            className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-900"
+                            className="block px-4 py-2 text-gray-700 hover:bg-accent/20 hover:text-primary"
                           >
                             {child.label}
                           </Link>
@@ -92,7 +92,7 @@ export default function NavBar({
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-gray-700 hover:text-blue-900 font-medium py-2 transition-colors"
+                    className="text-gray-700 hover:text-primary font-medium py-2 transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -101,7 +101,7 @@ export default function NavBar({
             ))}
             <Link
               href="/pendaftaran"
-              className="bg-blue-900 text-white px-6 py-2 rounded-full hover:bg-blue-800 transition-colors font-medium"
+              className="bg-primary text-primary-foreground px-6 py-2 rounded-full hover:bg-primary/90 transition-colors font-medium"
             >
               Daftar Sekarang
             </Link>
@@ -112,12 +112,12 @@ export default function NavBar({
             className="lg:hidden flex items-center p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <Icon 
-              data={{ 
-                name: isMobileMenuOpen ? 'BiX' : 'BiMenu', 
+            <Icon
+              data={{
+                name: isMobileMenuOpen ? 'BiX' : 'BiMenu',
                 size: 'medium',
-                color: 'blue' 
-              }} 
+                color: 'primary'
+              }}
             />
           </button>
         </div>
@@ -148,7 +148,7 @@ export default function NavBar({
                             <Link
                               key={childIndex}
                               href={child.href}
-                              className="block px-8 py-2 text-gray-600 hover:text-blue-900"
+                              className="block px-8 py-2 text-gray-600 hover:text-primary"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
                               {child.label}
@@ -171,7 +171,7 @@ export default function NavBar({
               <div className="px-4 pt-2">
                 <Link
                   href="/pendaftaran"
-                  className="block w-full text-center bg-blue-900 text-white px-6 py-3 rounded-full hover:bg-blue-800 transition-colors font-medium"
+                  className="block w-full text-center bg-primary text-primary-foreground px-6 py-3 rounded-full hover:bg-primary/90 transition-colors font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Daftar Sekarang

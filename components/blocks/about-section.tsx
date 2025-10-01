@@ -17,8 +17,8 @@ export const AboutSection = ({ data }: { data: any }) => {
         {/* Content */}
         <div className="order-2 lg:order-1">
           <div className="mb-8">
-            <h3 
-              className="text-blue-600 text-lg font-semibold mb-2"
+            <h3
+              className="text-primary text-lg font-semibold mb-2"
               data-tina-field={tinaField(data, 'subtitle')}
             >
               {data.subtitle}
@@ -42,13 +42,13 @@ export const AboutSection = ({ data }: { data: any }) => {
             {features.map((feature: any, index: number) => (
               <div key={index} className="flex items-start space-x-4" data-tina-field={tinaField(feature)}>
                 <div className="flex-shrink-0">
-                  <Icon 
-                    data={{ 
-                      name: feature.icon?.name || 'BiStar', 
-                      color: feature.icon?.color || 'blue',
+                  <Icon
+                    data={{
+                      name: feature.icon?.name || 'BiStar',
+                      color: feature.icon?.color || 'primary',
                       style: 'circle',
                       size: 'medium'
-                    }} 
+                    }}
                     tinaField={tinaField(feature, 'icon')}
                   />
                 </div>
@@ -74,7 +74,7 @@ export const AboutSection = ({ data }: { data: any }) => {
           {data.ctaButton && (
             <Link
               href={data.ctaButton.href}
-              className="inline-flex items-center space-x-2 bg-blue-600 text-white px-8 py-4 rounded-full font-medium hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center space-x-2 bg-primary text-primary-foreground px-8 py-4 rounded-full font-medium hover:bg-primary/90 transition-colors"
               data-tina-field={tinaField(data, 'ctaButton')}
             >
               <span>{data.ctaButton.label}</span>
@@ -97,13 +97,13 @@ export const AboutSection = ({ data }: { data: any }) => {
             {data.achievementCard && (
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
                 <div className="flex items-center space-x-4">
-                  <div className="bg-blue-100 p-3 rounded-full">
-                    <Icon 
-                      data={{ 
-                        name: data.achievementCard.icon?.name || 'BiTime', 
-                        color: 'blue',
+                  <div className="bg-accent/30 p-3 rounded-full">
+                    <Icon
+                      data={{
+                        name: data.achievementCard.icon?.name || 'BiTime',
+                        color: 'primary',
                         size: 'medium'
-                      }} 
+                      }}
                     />
                   </div>
                   <div>
@@ -169,7 +169,7 @@ export const aboutSectionBlockSchema: Template = {
       aboutImage: '/uploads/about-school.jpg',
       features: [
         {
-          icon: { name: 'BiAward', color: 'blue' },
+          icon: { name: 'BiAward', color: 'primary' },
           featureTitle: 'Akreditasi A',
           description: 'Terakreditasi A dari BAN-S/M dengan standar pendidikan tinggi'
         },

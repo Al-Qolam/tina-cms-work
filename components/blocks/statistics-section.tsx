@@ -107,22 +107,22 @@ export const StatisticsSection = ({ data }: { data: any }) => {
   const background = data.background || 'bg-white';
 
   const getTextClasses = (bg: string) => {
-    if (bg.includes('gray-900') || bg.includes('blue-900')) {
+    if (bg.includes('gray-900') || bg.includes('primary')) {
       return 'text-white';
     }
     return 'text-gray-900';
   };
 
   const getSubtitleClasses = (bg: string) => {
-    if (bg.includes('gray-900') || bg.includes('blue-900')) {
-      return 'text-blue-200';
+    if (bg.includes('gray-900') || bg.includes('primary')) {
+      return 'text-accent';
     }
-    return 'text-blue-600';
+    return 'text-primary';
   };
 
   const getDescriptionClasses = (bg: string) => {
-    if (bg.includes('gray-900') || bg.includes('blue-900')) {
-      return 'text-blue-100';
+    if (bg.includes('gray-900') || bg.includes('primary')) {
+      return 'text-white/90';
     }
     return 'text-gray-700';
   };
@@ -166,7 +166,7 @@ export const StatisticsSection = ({ data }: { data: any }) => {
               {[...Array(5)].map((_, i) => (
                 <div
                   key={i}
-                  className="w-2 h-2 bg-blue-300 rounded-full animate-pulse"
+                  className="w-2 h-2 bg-accent rounded-full animate-pulse"
                   style={{ animationDelay: `${i * 0.2}s` }}
                 ></div>
               ))}
