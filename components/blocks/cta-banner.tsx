@@ -30,12 +30,20 @@ export const CTABanner = ({ data }: { data: any }) => {
         style === 'gradient'
           ? 'bg-gradient-to-r from-primary via-primary/90 to-primary'
           : style === 'image' && backgroundImage
-            ? 'bg-cover bg-center bg-no-repeat'
+            ? ''
             : 'bg-primary'
       }`}
-      style={style === 'image' ? { backgroundImage: `url(${backgroundImage})` } : {}}
       background={data.background}
     >
+      {/* Background Image */}
+      {style === 'image' && backgroundImage && (
+        <img
+          src={backgroundImage}
+          alt="CTA Banner Background"
+          className="absolute inset-0 w-full h-full img-cover-safe"
+        />
+      )}
+
       {/* Overlay */}
       {(style === 'image' && overlay) && (
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>

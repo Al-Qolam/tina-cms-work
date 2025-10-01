@@ -48,10 +48,12 @@ export const HeroSlider = ({ data }: { data: any }) => {
           data-tina-field={tinaField(slide)}
         >
           {/* Background Image */}
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${slide.slideImage})` }}
-          >
+          <div className="absolute inset-0">
+            <img
+              src={slide.slideImage}
+              alt={slide.slideTitle || 'Hero slide'}
+              className="absolute inset-0 w-full h-full img-cover-safe"
+            />
             <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           </div>
 
